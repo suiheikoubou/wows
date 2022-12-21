@@ -1,3 +1,5 @@
+Supporting only Japanese.
+
 # wows
 World of Warships statistics using API
 

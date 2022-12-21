@@ -5,13 +5,15 @@ World of Warships statistics
 
 Application of crawling all accounts using API
 
-http://maplesyrup.sweet.coocan.jp/wows/
 
 read 
 https://github.com/suiheikoubou/wows/blob/main/doc/tawagoto.txt
 
 
 -------------------------------------------------------------------------
+http://maplesyrup.sweet.coocan.jp/wows/
+
+
 WG id
 
 asia: maplex (https://forum.worldofwarships.asia/profile/2008361353-maplex/)

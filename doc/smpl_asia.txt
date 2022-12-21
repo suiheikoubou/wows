@@ -1,0 +1,36 @@
+set wows_base_dir=E:\zz\base
+set wows_repo_dir=E:\zz\report
+set wows_temp_dir=E:\zz\temp
+set realm=asia
+set this_date=20221224
+set prev_date=20221217
+set since=2022/12/15
+set api_url=api.worldofwarships.asia
+set api_key=********************************
+
+java -Xms1024m  -Xmx1024m    com.suiheikoubou.wows.app.download.MstShipDlApp              %wows_temp_dir%                         %realm%   %this_date%             7     shipmst                       %api_url% %api_key%  1000
+java -Xms1024m  -Xmx1024m    com.suiheikoubou.wows.app.extract.MstShipExtApp              %wows_temp_dir%    %wows_base_dir%      %realm%   %this_date%                   shipmst   ship_%this_date%.txt          old_ships.txt
+
+mkdir     %wows_temp_dir%\%realm%\%this_date%
+java -Xms4096m  -Xmx4096m    com.suiheikoubou.wows.app.download.AccountsDlApp             %wows_temp_dir%                         %realm%   %this_date%    2000000000   500000   100  1000    acnt      %api_url% %api_key% 10000
+java -Xms4096m  -Xmx4096m    com.suiheikoubou.wows.app.download.AccountsDlApp             %wows_temp_dir%                         %realm%   %this_date%    3000000000   100000   100  1000    acnt      %api_url% %api_key% 10000
+
+mkdir     %wows_base_dir%\%realm%\%this_date%
+java -Xms24576m -Xmx24576m   com.suiheikoubou.wows.app.extract.AccountBattleExtApp        %wows_temp_dir%     %wows_base_dir%     %realm%   %this_date%                   acnt      acnt
+
+java -Xms24576m -Xmx24576m   com.suiheikoubou.wows.app.process.FilterAccountIdApp         %wows_base_dir%     %wows_base_dir%     %realm%   %this_date%                   acnt      active.txt          active    %since%
+java -Xms24576m -Xmx24576m   com.suiheikoubou.wows.app.process.FilterAccountIdApp         %wows_base_dir%     %wows_base_dir%     %realm%   %this_date%                   acnt      hidden1.txt         hidden
+copy /y   %wows_base_dir%\%realm%\%this_date%\active.txt         %wows_temp_dir%\%realm%\%this_date%
+
+java -Xms4096m  -Xmx4096m    com.suiheikoubou.wows.app.download.PvpShipDlApp              %wows_temp_dir%                         %realm%   %this_date%    active.txt     ship                          %api_url% %api_key% 10000 false
+
+java -Xms24576m -Xmx24576m   com.suiheikoubou.wows.app.extract.ShipBattleExtApp           %wows_temp_dir%     %wows_temp_dir%     %realm%   %this_date%                   ship      shiptmp   hidden2.txt
+
+java -Xms24576m -Xmx24576m   com.suiheikoubou.wows.app.process.MergeShipBattleApp         %wows_base_dir%     %wows_temp_dir%     %realm%   %this_date%    %prev_date%    ship      shiptmp
+copy /y   %wows_temp_dir%\%realm%\%this_date%\hidden2.txt        %wows_base_dir%\%realm%\%this_date%
+java -Xms4096m  -Xmx4096m    com.suiheikoubou.app.StringSetMergeApp                       %wows_base_dir%\%realm%\%this_date%                                             hidden1.txt         hidden2.txt         hidden.txt          UTF8
+
+java -Xms24576m -Xmx24576m   com.suiheikoubou.wows.app.process.SubtractAccountBattleApp   %wows_base_dir%     %wows_repo_dir%     %realm%   %this_date%    %prev_date%    acnt      10_acnt
+java -Xms24576m -Xmx24576m   com.suiheikoubou.wows.app.process.SubtractShipBattleApp      %wows_base_dir%     %wows_repo_dir%     %realm%   %this_date%    %prev_date%    ship      10_ship   hidden.txt
+java -Xms24576m -Xmx24576m   com.suiheikoubou.wows.app.process.RestructShipBattleApp      %wows_repo_dir%     %wows_repo_dir%     %realm%   %this_date%                   10_ship   11_ship   ship
+

@@ -1,11 +1,11 @@
 Supporting only Japanese.
 
 # wows
-World of Warships statistics using API
+World of Warships statistics
+
+Application of crawling all accounts using API
 
 http://maplesyrup.sweet.coocan.jp/wows/
-
-Application of crawling all accounts
 
 
 WG id

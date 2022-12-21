@@ -8,7 +8,7 @@ Application of crawling all accounts using API
 http://maplesyrup.sweet.coocan.jp/wows/
 
 read 
-doc/tawagoto.txt
+https://github.com/suiheikoubou/wows/blob/main/doc/tawagoto.txt
 
 
 -------------------------------------------------------------------------

@@ -11,6 +11,7 @@ https://github.com/suiheikoubou/wows/blob/main/doc/tawagoto.txt
 
 
 -------------------------------------------------------------------------
+site
 http://maplesyrup.sweet.coocan.jp/wows/
 
 

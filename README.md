@@ -7,7 +7,11 @@ Application of crawling all accounts using API
 
 http://maplesyrup.sweet.coocan.jp/wows/
 
+read 
+doc/tawagoto.txt
 
+
+-------------------------------------------------------------------------
 WG id
 
 asia: maplex (https://forum.worldofwarships.asia/profile/2008361353-maplex/)

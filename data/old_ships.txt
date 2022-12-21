@@ -1,0 +1,49 @@
+4184749520	Gnevny (old)	Destroyer	ussr	5	false	false	0	0	X
+4180555216	Kiev (old)	Destroyer	ussr	7	false	false	0	0	X
+4183700944	Ognevoi (old)	Destroyer	ussr	6	false	false	0	0	X
+4181603792	Tashkent (old)	Destroyer	ussr	8	false	false	0	0	X
+4284364496	Kagero (old)	Destroyer	japan	9	false	false	0	0	X
+4288558800	Hatsuharu (old)	Destroyer	japan	7	false	false	0	0	X
+4287510224	Fubuki (old)	Destroyer	japan	8	false	false	0	0	X
+4289607376	Mutsuki (old)	Destroyer	japan	6	false	false	0	0	X
+4282300400	Pensacola (old)	Cruiser	usa	7	false	false	5570000	0	PASC012
+4287543280	Cleveland (old)	Cruiser	usa	6	false	false	2950000	0	PASC007
+4277057520	Baltimore (old)	Cruiser	usa	9	false	false	13600000	0	PASC017
+4280203248	New Orleans (old)	Cruiser	usa	8	false	false	8900000	0	PASC014
+3762272048	Graf Zeppelin (old)	AirCarrier	germany	8	false	false	0	13700	PGSA508
+3762272240	Enterprise (old)	AirCarrier	usa	8	false	false	0	14000	PASA508
+3763320528	Kaga (old)	AirCarrier	japan	7	false	false	0	9700	PJSA507
+3763320816	Saipan (old)	AirCarrier	usa	7	false	false	0	9500	PASA507
+4277122768	Hakuryu (old)	AirCarrier	japan	10	false	false	21800000	0	PJSA017
+4279219920	Taiho (old)	AirCarrier	japan	9	false	false	15320000	0	PJSA015
+4279220208	Midway (old)	AirCarrier	usa	10	false	false	21000000	0	PASA015
+4281317360	Essex (old)	AirCarrier	usa	9	false	false	14500000	0	PASA013
+4282365648	Shokaku (old)	AirCarrier	japan	8	false	false	10080000	0	PJSA012
+4282365936	Lexington (old)	AirCarrier	usa	8	false	false	9600000	0	PASA012
+4283414224	Hiryu (old)	AirCarrier	japan	7	false	false	6000000	0	PJSA011
+4284463088	Ranger (old)	AirCarrier	usa	7	false	false	6000000	0	PASA010
+4285511376	Ryujo (old)	AirCarrier	japan	6	false	false	3470000	0	PJSA009
+4288657104	Zuiho (old)	AirCarrier	japan	5	false	false	1660000	0	PJSA006
+4288657392	Independence (old)	AirCarrier	usa	6	false	false	3280000	0	PASA006
+4290754544	Langley (old)	AirCarrier	usa	4	false	false	820000	0	PASA004
+4292851408	Hosho (old)	AirCarrier	japan	4	false	false	810000	0	PJSA002
+4292851696	Bogue (old)	AirCarrier	usa	5	false	false	1650000	0	PASA002
+3445536592	Brennus (old)	Cruiser	france	10	FALSE	TRUE	0	99999	PFSC810
+3447600976	L'Effronte (old)	Destroyer	france	8	FALSE	TRUE	0	9500	PFSD808
+3450812144	Giunio Bruto (old)	Battleship	italy	6	FALSE	TRUE	0	5200	PISB805
+3761125168	Z-35 (old)	Destroyer	germany	8	FALSE	TRUE	0	19000	PGSD509
+4184782288	Kirov (old)	Cruiser	ussr	5	FALSE	TRUE	1320000	0	PRSC105
+3331241680	Tone 3	Cruiser	japan	8	FALSE	TRUE	0	99999	PJSC919
+3332290256	Tone 2	Cruiser	japan	8	FALSE	TRUE	0	99999	PJSC918
+3730781648	V. I. Lenin	Battleship	ussr	8	FALSE	TRUE	0	11000	PRSB538
+4160664880	De Zeven Provinci?n	Cruiser	europe	8	FALSE	TRUE	0	11000	PWSC128
+4170102064	Johan de Witt	Cruiser	europe	9	FALSE	TRUE	0	0	PWSC119
+4171150640	Haarlem	Cruiser	europe	8	FALSE	TRUE	0	0	PWSC118
+4172199216	Eendracht	Cruiser	europe	7	FALSE	TRUE	0	0	PWSC117
+4173247792	Kijkduin	Cruiser	europe	6	FALSE	TRUE	0	0	PWSC116
+4174296368	Celebes	Cruiser	europe	5	FALSE	TRUE	0	0	PWSC115
+4175344944	De Ruyter	Cruiser	europe	4	FALSE	TRUE	0	0	PWSC114
+4176393520	Java	Cruiser	europe	3	FALSE	TRUE	0	0	PWSC113
+4177442096	Gelderland	Cruiser	europe	2	FALSE	TRUE	0	0	PWSC112
+4178490672	Van Kinsbergen	Cruiser	europe	1	FALSE	TRUE	0	0	PWSC111
+4179539248	Gouden Leeuw	Cruiser	europe	10	FALSE	TRUE	0	0	PWSC110

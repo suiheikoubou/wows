@@ -1,19 +1,19 @@
 set wows_base_dir=E:\zz\base
 set wows_repo_dir=E:\zz\report
 set wows_temp_dir=E:\zz\temp
-set realm=asia
+set realm=eu
 set this_date=20221224
 set prev_date=20221217
 set since=2022/12/15
-set api_url=api.worldofwarships.asia
+set api_url=api.worldofwarships.eu
 set api_key=********************************
 
 java -Xms1024m  -Xmx1024m    com.suiheikoubou.wows.app.download.MstShipDlApp              %wows_temp_dir%                         %realm%   %this_date%             7     shipmst                       %api_url% %api_key%  1000
 java -Xms1024m  -Xmx1024m    com.suiheikoubou.wows.app.extract.MstShipExtApp              %wows_temp_dir%    %wows_base_dir%      %realm%   %this_date%                   shipmst   ship_%this_date%.txt          old_ships.txt
 
 mkdir     %wows_temp_dir%\%realm%\%this_date%
-java -Xms4096m  -Xmx4096m    com.suiheikoubou.wows.app.download.AccountsDlApp             %wows_temp_dir%                         %realm%   %this_date%    2000000000   600000   100  1000    acnt      %api_url% %api_key% 10000
-java -Xms4096m  -Xmx4096m    com.suiheikoubou.wows.app.download.AccountsDlApp             %wows_temp_dir%                         %realm%   %this_date%    3000000000   100000   100  1000    acnt      %api_url% %api_key% 10000
+java -Xms4096m  -Xmx4096m    com.suiheikoubou.wows.app.download.AccountsDlApp             %wows_temp_dir%                         %realm%   %this_date%     500000000  1200000   100  1000    acnt      %api_url% %api_key% 10000
+
 
 mkdir     %wows_base_dir%\%realm%\%this_date%
 java -Xms24576m -Xmx24576m   com.suiheikoubou.wows.app.extract.AccountBattleExtApp        %wows_temp_dir%     %wows_base_dir%     %realm%   %this_date%                   acnt      acnt

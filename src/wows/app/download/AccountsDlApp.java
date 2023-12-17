@@ -113,7 +113,7 @@ public final class AccountsDlApp extends AbstractWoWsDlApp
 		setApplicationId( applicationId );
 		setOutFolder( outFolder );
 		setSeqNo( 0 );
-		outFolder.mkdir();
+		outFolder.mkdirs();
 		appendLines( genLines( offset , limitCnt ) );
 		Thread.sleep( 1000L );
 

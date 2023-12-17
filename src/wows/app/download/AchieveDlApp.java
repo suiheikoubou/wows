@@ -6,7 +6,7 @@ import java.util.*;
 import com.suiheikoubou.common.*;
 import com.suiheikoubou.common.dlworker.*;
 
-public final class MstShipDlApp extends AbstractWoWsDlApp
+public final class AchieveDlApp extends AbstractWoWsDlApp
 {
 	public static void main( String[] args )
 	{
@@ -17,18 +17,18 @@ public final class MstShipDlApp extends AbstractWoWsDlApp
 				File					baseFolder			= new File( args[0] );
 				File					svrFolder			= new File( baseFolder , args[1] );
 				File					thisFolder			= new File( svrFolder  , args[2] );
-				int						dlCnt				= Integer.parseInt( args[3] );
+				File					inFile				= new File( thisFolder , args[3] );
 				File					outFolder			= new File( thisFolder , args[4] );
 				File					logFile				= new File( thisFolder  , "error.log" );
-				URL						hostUrl				= new URL( "http" , args[5] , "/wows/encyclopedia/ships/" );
+				URL						hostUrl				= new URL( "http" , args[5] , "/wows/account/achievements/" );
 				String					applicationId		= args[6];
 				long					interval			= Long.parseLong( args[7] );
-				MstShipDlApp			instance			= new MstShipDlApp( logFile );
-				instance.execute( hostUrl , applicationId , interval , dlCnt , outFolder );
+				AchieveDlApp			instance			= new AchieveDlApp( logFile );
+				instance.execute( hostUrl , applicationId , interval , inFile , outFolder );
 			}
 			else
 			{
-				System.out.println( "usage : java MstShipDlApp [base folder] [server] [date this] [cnt] [out folder] [host url] [app id] [interval]" );
+				System.out.println( "usage : java AchieveDlApp [base folder] [server] [date this] [in file] [out folder] [host url] [app id] [interval]" );
 			}
 		}
 		catch( Exception ex )
@@ -37,64 +37,44 @@ public final class MstShipDlApp extends AbstractWoWsDlApp
 		}
 	}
 	
-	public MstShipDlApp( File logFile )
+	public AchieveDlApp( File logFile )
 	{
 		super( logFile );
 	}
-	public void execute( URL hostUrl , String applicationId , long interval , int dlCnt , File outFolder ) throws Exception
+	public void execute( URL hostUrl , String applicationId , long interval , File inFile , File outFolder ) throws Exception
 	{
 		setUrl( hostUrl );
 		setApplicationId( applicationId );
 		setOutFolder( outFolder );
 		setSeqNo( 0 );
 		outFolder.mkdirs();
-		appendLines( genLines( dlCnt ) );
+		appendLines( inFile );
 		
-		DlWorker						worker				= DlWorker.getInstance( "DL_MstShip" , this , this , 10 , interval );
+		DlWorker						worker				= DlWorker.getInstance( "DL_Achieve" , this , this , 100 , interval );
 		worker.startAll( 100L );
 		while( worker.activeCount() > 0 )
 		{
 			outLog( "line count : " + String.valueOf( getLineCount() ) );
-			Thread.sleep( 1000L );
+			Thread.sleep( 10000L );
 		}
-	}
-	protected List<String> genLines( long limitCnt )
-	{
-		List<String>					lines				= new ArrayList<String>();
-		for( long ix = 1 ; ix <= limitCnt ; ix++ )
-		{
-			String						line				= String.format( "%d" , ix );
-			lines.add( line );
-		}
-		return	lines;
 	}
 	public synchronized DlQueue getQueue()
 	{
 		DlQueue							queue				= null;
-		String							page_no				= getQueueString( 1 );
-		if( page_no != null )
+		String							accountId			= getQueueString( 100 );
+		if( accountId != null )
 		{
-			File						outFile				= new File( getOutFolder() , page_no + ".json" );
+			File						outFile				= new File( getOutFolder() , String.format( "%06d" , getSeqNo() ) + ".json" );
 			String						keyString			= outFile.getPath();
 			StringBuffer				buffer				= new StringBuffer();
 			buffer.append( "application_id=" );
 			buffer.append( getApplicationId() );
 			buffer.append( "&" );
 			buffer.append( "language=en" );
+
 			buffer.append( "&" );
-			buffer.append( "fields=" );
-			buffer.append( "is_premium" );
-			buffer.append(",name" );
-			buffer.append(",nation" );
-			buffer.append(",ship_id" );
-			buffer.append(",tier" );
-			buffer.append(",type" );
-			buffer.append(",price_gold" );
-			buffer.append(",price_credit" );
-			buffer.append(",ship_id_str" );
-			buffer.append( "&" );
-			buffer.append( "page_no=" );
-			buffer.append( page_no );
+			buffer.append( "account_id=" );
+			buffer.append( accountId );
 //			System.out.println( buffer.toString() );
 			queue											= DlQueue.getInstance( getSeqNo() , getUrl() , keyString , buffer.toString() , outFile );
 			incrementSeqNo();

@@ -62,7 +62,7 @@ public final class PvpShipDlApp extends AbstractWoWsDlApp
 		setOutFolder( outFolder );
 		setSeqNo( 0 );
 		setIsGetExtra( isGetExtra );
-		outFolder.mkdir();
+		outFolder.mkdirs();
 		appendLines( inFile );
 		
 		DlWorker						worker				= DlWorker.getInstance( "DL_PvpShip" , this , this , 100 , interval );

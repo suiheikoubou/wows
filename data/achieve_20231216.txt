@@ -1,0 +1,366 @@
+PCH001_DoubleKill	連続攻撃	honorable	solo	敵艦艇を 10 秒以内に 2 隻撃沈する。	1	-1																																	0
+PCH002_OneSoldierInTheField	孤高の戦士	heroic	solo	4 隻以上の敵艦艇に対し単独で立ち向かい、勝利する。	1	-1																																	0
+PCH003_MainCaliber	大口径	heroic	solo	4 隻以上の敵艦艇にダメージを与える。与ダメージが全敵艦艇の合計 HP の 30% 以上であること。	1	-1																																	0
+PCH004_Dreadnought	ドレッドノート	heroic	solo	自艦の基本 HP の 120% 以上のダメージを 4 隻以上の敵艦艇から被った上で生還する。	1	-1																																	0
+PCH005_Support	共謀者	heroic	solo	6 隻以上の敵艦艇にダメージを与える。各艦艇に対し、その基本 HP の 20% 以上のダメージを与えること。	1	-1																																	0
+PCH006_Withering	災害誘発	heroic	solo	火災と浸水により敵艦艇に対し 60000 HP 以上のダメージを与える。	1	-1																																	0
+PCH007_ClearSky	晴天	honorable	solo	1 戦中に全ての敵機 (巡洋艦および戦艦から発艦した機敵機を含む) の半数以上を撃墜する。30 機以上を戦闘機または対空兵装で撃墜する必要がある。	1	-1																																	0
+PCH010_Retribution	かすり傷さ!	honorable	solo	自艦が撃沈された後に、敵艦を 1 隻撃沈する。	1	-1																																	0
+PCH011_InstantKill	破壊的一撃	honorable	solo	任意の兵装で敵艦艇 1 隻を 5 秒以内に撃沈する。その艦艇に与えたダメージがその基本 HP の 50% 以上である必要がある。	1	-1																																	0
+PCH012_Arsonist	放火犯	honorable	solo	敵艦艇に火災を発生させた後、その敵艦艇を撃沈する。火災によるダメージがその敵艦艇の基本 HP の 40% 以上であること。	1	-1																																	0
+PCH013_Liquidator	水浸し	honorable	solo	敵艦に浸水を発生させた上で、その敵艦艇を撃沈する。浸水による与ダメージがその敵艦艇の基本 HP の 40% 以上であること。	1	-1																																	0
+PCH014_Headbutt	頑強	honorable	solo	敵艦を体当たりにより 1 隻撃沈した上で生還する。	1	-1																																	0
+PCH016_FirstBlood	最初の獲物	honorable	solo	戦闘において最初に敵艦艇を 1 隻撃沈する。	1	-1																																	0
+PCH017_Fireproof	防火	honorable	solo	火災によって自艦の基本 HP の 40% 以上のダメージを被った上で生還する。	1	-1																																	0
+PCH018_Unsinkable	不沈	honorable	solo	浸水により自艦の基本 HP の 40% 以上のダメージを被った上で生還する。	1	-1																																	0
+PCH019_Detonated	爆沈	honorable	solo	弾薬庫に甚大な損傷を受け、その誘爆により撃沈される。	1	-1																																	0
+PCH020_ATBACaliber	接近戦エキスパート	honorable	solo	敵艦艇にダメージを与え、撃沈する。その際、最後の直接ダメージを副砲により与えること。	1	-1																																	0
+PCH023_Warrior	クラーケン来襲!	heroic	solo	敵艦艇を 5 隻以上撃沈する。	1	-1																																	0
+PCH025_EarningAchievement1	戦功者	honorable	solo	任意の英雄勲章を 10 回取得する。	0	-1																																	0
+PCH026_EarningAchievement2	海の伝説	honorable	solo	任意の英雄勲章を 50 回取得する。	0	-1																																	0
+PCH027_EarningAchievement3	大洋の破壊神	honorable	solo	任意の英雄勲章を 100 回取得する。	0	-1																																	0
+PCH028_Winning1	アマチュア	honorable	solo	ランダム戦で 10 勝する。	0	-1																																	0
+PCH029_Winning2	戦士	honorable	solo	ランダム戦で 50 勝する。	0	-1																																	0
+PCH030_Winning3	ベテラン	honorable	solo	ランダム戦で 100 勝する。	0	-1																																	0
+PCH031_EarningMoney1	初期資本	economic	solo	戦闘で通算 100000 クレジットを取得する。	0	-1																																	0
+PCH032_EarningMoney2	マネーバッグ	economic	solo	戦闘で通算 1000000 クレジットを取得する。	0	-1																																	0
+PCH033_EarningMoney3	有力事業者	economic	solo	戦闘で通算 10000000 クレジットを取得する。	0	-1																																	0
+PCH034_ScienceOfWinning1	海戦: 放火	honorable	solo	初めて、火災を発生させることで敵艦艇を撃沈する。	0	-1																																	0
+PCH035_ScienceOfWinning2	海戦: 浸水	honorable	solo	初めて、敵艦艇 1 隻を浸水によって撃沈する。	0	-1																																	0
+PCH036_ScienceOfWinning3	海戦: 体当たり	honorable	solo	初めて、敵艦艇 1 隻を体当たりによって撃沈する。	0	-1																																	0
+PCH037_ScienceOfWinning4	海戦: ラッキーショット	honorable	solo	初めて、敵艦 1 隻の弾薬庫にダメージを与え、その誘爆により撃沈する。	0	-1																																	0
+PCH038_ScienceOfWinning5	海戦: 戦術	honorable	solo	初めて、キーエリアまたは敵陣地を占領する。	0	-1																																	0
+PCH039_ScienceOfWinning6	海戦: 兵装の基本	honorable	solo	初めて敵艦艇に 1000000 HP のダメージを与える。	0	-1																																	0
+PCH040_TaskPerforming1	任務の最中	honorable	solo	デイリーミッションを 5 件達成する。	0	-1																																	0
+PCH041_TaskPerforming2	働き者	honorable	solo	デイリーミッションを 50 件達成する。	0	-1																																	0
+PCH042_TaskPerforming3	準備万端	honorable	solo	デイリーミッションを 100 件達成する。	0	-1																																	0
+PCH043_TaskPerforming4	毎日冒険を	honorable	solo	5 日連続でデイリーミッションを 1 件以上達成する。	0	-1																																	0
+PCH044_Researching1	造船技師	research	solo	新しい艦艇を 1 隻研究する。	0	-1																																	0
+PCH045_Researching2	造船者	research	solo	艦艇を 10 隻研究する。	0	-1																																	0
+PCH046_Researching3	造船技師長	research	solo	艦艇を 50 隻研究する。	0	-1																																	0
+PCH048_CBTPartisipant	CBT ベテラン	service_medal	solo	開発チームは、クローズドβテストにご参加頂いた皆様に感謝いたします。	0	-1																																	0
+PCH049_ATPartisipant	AT ベテラン	service_medal	solo	開発チームは、αテストにご参加頂いた皆様に感謝いたします!	0	-1																																	0
+PCH050_BWPartisipant	BW 参加者	service_medal	solo	開発チームは、βウィークエンドにご参加頂いた皆様に感謝いたします。	0	-1																																	0
+PCH051_STPartisipant	ST 参加者	service_medal	solo	開発チームは、スーパーテストにご参加頂いた皆様に感謝いたします。	0	-1																																	0
+PCH053_WGSPbStaff	開発者	service_medal	solo	開発チームのメンバーに対して。	0	-1																																	0
+PCH054_F_Manners	礼節が人を作る	festival	solo	やりましたね!1 周年。	0	-1																																	0
+PCH055_F_WrongSow	暗闇での発砲	festival	solo	やりましたね!1 周年。	0	-1																																	0
+PCH056_F_Snatch	ビッグロール	festival	solo	やりましたね!1 周年。	0	-1																																	0
+PCH057_F_RiseOfTheMachines	マシーンの台頭	festival	solo	やりましたね!1 周年。	0	-1																																	0
+PCH058_F_PartyCheckIn	飛び入り参加	festival	solo	やりましたね!1 周年。	0	-1																																	0
+PCH059_F_RunForest	逃げ惑え!	festival	solo	やりましたね!1 周年。	0	-1																																	0
+PCH060_F_FireShow	火炎ショー	festival	solo	やりましたね!1 周年。	0	-1																																	0
+PCH061_F_FestivSoup	祝賀スープ	festival	solo	やりましたね!1 周年。	0	-1																																	0
+PCH062_F_PartyAnimal	パーティーの主役	festival	solo	やりましたね!1 周年。	0	-1																																	0
+PCH063_F_KingOfParty	パーティーの王者	festival	solo	やりましたね!1 周年。	0	-1																																	0
+PCH064_LootboxOpening1	補給士官補	honorable	solo	コンテナを 10 個開封する。	0	-1																																	0
+PCH065_LootboxOpening2	補給士官	honorable	solo	コンテナを 100 個開封する。	0	-1																																	0
+PCH066_LootboxOpening3	上級補給士官	honorable	solo	コンテナを 1,000 個開封する。	0	-1																																	0
+PCH067_LootboxOpening4	安定補給	honorable	solo	5 日連続で 1 個以上のコンテナを開封する。	0	-1																																	0
+PCH068_F_2016	ゴーストバスター	festival	solo	オペレーション「Transylvania を救え」で 1 勝する。	0	-1																																	0
+PCH070_Campaign1Completed	勝利の科学	honorable	solo	「勝利の科学」キャンペーンの最終タスクを達成する。	0	-1																																	0
+PCH071_Campaign1CompletedExcellent	「勝利の科学」名誉達成	honorable	solo	「勝利の科学」キャンペーンの全タスクを達成する。	0	-1																																	0
+PCH072_CampaignSBCompleted	名誉ある貢献	honorable	solo	「名誉ある貢献」キャンペーンの最終タスクを達成する。	0	-1																																	0
+PCH073_CampaignSBCompletedExcellent	「名誉ある貢献」名誉達成	honorable	solo	「名誉ある貢献」キャンペーンの全タスクを達成する。	0	-1																																	0
+PCH074_F_DressTheTree	良い気分	festival	solo	あなたは艦艇を多くのカラフルな布で飾りました。楽しそうですね。でも、何故それらの布はリサイクルできないのでしょう?2016 冬季マラソン!	0	-1																																	0
+PCH075_F_ToTheBottom	水底へ	festival	solo	未研究の事実 #1: 艦艇を水底へと送り届けるには、氷山よりも魚雷が効果的であることが明らかになりました。そしてあなたはこれが事実であるかどうか、全ての艦種で試しました。2016 冬季マラソン!	0	-1																																	0
+PCH076_F_Aiming	射撃? 難しすぎる	festival	solo	未研究の事実 #2: あなたの水兵たちの射撃技術は最高ではないかもしれませんが、それでも仕事は達成できました。そう、25 回も! 艦長にメダルを授与する理由としては充分です。2016 冬季マラソン!	0	-1																																	0
+PCH077_F_Safecracker	空き缶	festival	solo	理論上、それは永遠に続くのです。練習では、あなたは最後の 17 個を空けることを我慢できませんでした。2016 冬季マラソン!	0	-1																																	0
+PCH078_CampaignNY17BCompleted	グラーフ・シュペー追撃	honorable	solo	「グラーフ・シュペー追撃」キャンペーンの最終タスクを達成する。	0	-1																																	0
+PCH079_F_500Leagues	壮大なる旅	festival	solo	これまで 2,017 km 航海してきました。大変でしたか? そうでもなかったって? こんなに航海してきたのに、スーパーへの買い物は遠いって言うんですよね!2016 冬季マラソン!	0	-1																																	0
+PCH080_F_BreakTheBank	成金	festival	solo	2,017,000 クレジットもあれば、実に多くの働き者のネズミたちを養うことができます。あなたはやってのけましたし、私たちはそれを倍にしました。ご自身を誇りに思われていることでしょう。サーバーのための電力を発電しているハムスターたちの餌を買いに行っても良いですか?2016 冬季マラソン!	0	-1																																	0
+PCH081_F_WinALL	秘蔵者 2016	festival	solo	おめでとうございます、あなたは見事 2016 冬季マラソンの全実績を取得しました!2016 冬季マラソン!	0	-1																																	0
+PCH082_F_WinAtLeastOne	グッドスタート	festival	solo	冬はゲームをプレイするには最高の季節です。あなたは勝利を収めました!2016 冬季マラソン!	0	-1																																	0
+PCH083_CampaignNY17BCompletedExcellent	「グラーフ・シュペー追撃」名誉達成	honorable	solo	「グラーフ・シュペー追撃」キャンペーンの全タスクを達成する。	0	-1																																	0
+PCH084_CampaignNY17ECompleted	サンタのクリスマスプレゼント	honorable	solo	「サンタのクリスマスプレゼント」キャンペーンの最終タスクを達成する。	0	-1																																	0
+PCH085_CampaignNY17ECompletedExcellent	「サンタのクリスマスプレゼント」名誉達成	honorable	solo	「サンタのクリスマスプレゼント」キャンペーンの全タスクを達成する。	0	-1																																	0
+PCH086_WGFest2016	Wargaming Fest 2016 参加者	service_medal	solo	WG Fest 2016 への参加に対して。	0	-1																																	0
+PCH087_FillAlbum	ビスマルク追撃戦	honorable	solo	「ビスマルク追撃戦」コレクションを全て完成させる。	0	-1																																	0
+PCH088_BismarckCompleted	ビスマルク追撃戦	honorable	solo	「ビスマルク追撃戦」キャンペーンの最終タスクを達成する。	0	-1																																	0
+PCH089_BismarckCompletedExcellent	「ビスマルク追撃戦」名誉達成	honorable	solo	「ビスマルク追撃戦」キャンペーンの全タスクを達成する。	0	-1																																	0
+PCH090_ATB_Aegaeon	アイガイオーン	service_medal	solo	イベント「クラッシュ・オブ・ジ・エレメンツ」において、カテゴリ「艦艇撃沈数」で TOP 100 を達成する。	0	-1																																	0
+PCH091_ATB_Poseidon	ポセイドーン	service_medal	solo	イベント「クラッシュ・オブ・ジ・エレメンツ」において、カテゴリ「勝利戦闘数」で TOP 100 を達成する。	0	-1																																	0
+PCH092_ATB_Hephaestus	ヘーパイストス	service_medal	solo	イベント「クラッシュ・オブ・ジ・エレメンツ」において、カテゴリ「総与ダメージ」で TOP 100 を達成する。	0	-1																																	0
+PCH093_ATB_Hestia	ヘスティアー	service_medal	solo	イベント「クラッシュ・オブ・ジ・エレメンツ」において、カテゴリ「リボン・実績取得数」で TOP 100 を達成する。	0	-1																																	0
+PCH094_ATB_Hyperion	ヒュペリーオーン	service_medal	solo	イベント「クラッシュ・オブ・ジ・エレメンツ」において、カテゴリ「取得 EXP」 (各種倍率の適用前の値) で TOP 100 を達成する。	0	-1																																	0
+PCH095_ATB_Winner	クラッシュ・オブ・ジ・エレメンツ参加者	service_medal	solo	「クラッシュ・オブ・ジ・エレメンツ」の勝利チーム	0	-1																																	0
+PCH096_PVE_HERO_WIN_ONE	勝利への決意	heroic	solo	チームの最後の残存艦として、副タスクを 1 つ達成した上で、オペレーションを達成する。	1	-1																																	0
+PCH097_PVE_HON_WIN_ALL_DONE	海の星	honorable	solo	オペレーションと全ての副タスクを達成し、戦闘終了まで生き残り、自艦の HP の 100% 以上のダメージを与える。	1	-1																																	0
+PCH098_PVE_HON_PR_DONE_1	歴戦の風格	honorable	solo	オペレーションを 50 個達成する。	0	-1																																	0
+PCH099_PVE_HON_PR_DONE_2	オールドタイマー	honorable	solo	オペレーションを 125 個達成する。	0	-1																																	0
+PCH100_PVE_HON_PR_DONE_3	経験豊富	honorable	solo	オペレーションを 250 個達成する。	0	-1																																	0
+PCH102_PVE_HON_PR_DONE_ALL_1	重要任務	honorable	solo	オペレーションで副タスクを 150 個達成する。	0	-1																																	0
+PCH103_PVE_HON_PR_DONE_ALL_2	特別指令	honorable	solo	オペレーションで副タスクを 450 個達成する。	0	-1																																	0
+PCH104_PVE_HON_PR_DONE_ALL_3	極秘指令	honorable	solo	オペレーションで副タスクを 900 個達成する。	0	-1																																	0
+PCH106_PVE_HON_SAVE_SHIP	ジェンキンス司令を救え	honorable	solo	味方を見捨てたりなんかしない!	0	-1																																	0
+PCH107_PVE_HON_PR_SAVE_1	盾	honorable	solo	オペレーションで主要艦艇および補助艦艇を 20 隻生還させる。	0	-1																																	0
+PCH108_PVE_HON_PR_SAVE_2	守護者	honorable	solo	オペレーションで主要艦艇および補助艦艇を 60 隻生還させる。	0	-1																																	0
+PCH109_PVE_HON_PR_SAVE_3	保護者	honorable	solo	オペレーションで主要艦艇および補助艦艇を 120 隻生還させる。	0	-1																																	0
+PCH111_PVE_HON_PR_FRAG_1	駆除者	honorable	solo	オペレーションで主要艦艇および補助艦艇を 25 隻撃沈する。	0	-1																																	0
+PCH112_PVE_HON_PR_FRAG_2	襲撃者	honorable	solo	オペレーションで主要艦艇および補助艦艇を 75 隻撃沈する。	0	-1																																	0
+PCH113_PVE_HON_PR_FRAG_3	破壊者	honorable	solo	オペレーションで主要艦艇および補助艦艇を 150 隻撃沈する。	0	-1																																	0
+PCH115_PVE_HON_DONE_CLASS	万能艦長	honorable	solo	各艦種でプレイし、オペレーションを達成する。	1	-1																																	0
+PCH118_PVE_HERO_DAM_ENEM	アシスト	heroic	solo	敵艦艇の半数以上にダメージを与える。各艦艇に与えたダメージが、各艦艇の基本 HP の 10% 以上であること。	1	-1																																	0
+PCH120_PVE_HON_HIT_TORP	エイ	honorable	solo	1 戦中に艦載魚雷または潜水艦の魚雷を敵艦艇に 15 本命中させる。	1	-1																																	0
+PCH122_PVE_HON_FRAG_CLASS	自然選択	honorable	solo	自艦と同じ艦種の艦艇を 4 隻撃沈するか、他の任意の艦種の艦艇を 8 隻撃沈する。	1	-1																																	0
+PCH123_PVE_HON_FRAG_WAY	クラッシュ・テスター	honorable	solo	嵐の中のいずれかの港。	0	-1																																	0
+PCH124_PVE_HON_DIE	勝利目前	honorable	solo	私は必ず戻る。	0	-1																																	0
+PCH125_PVE_HERO_DAM	多大な貢献	heroic	solo	チームによる与ダメージの 35% 以上のダメージを与えてオペレーションを達成する。自艦による与ダメージが 150000 HP 以上であること。	1	-1																																	0
+PCH126_PVE_HERO_WIN_SUR	戦術家	heroic	solo	全ての副タスクを達成した上で、オペレーションを達成する。全ての味方が生還すること。	1	-1																																	0
+PCH127_FillAlbum_Dunkirk	ダンケルク	honorable	solo	「ダンケルク」のコレクションを全て完成させる。	0	-1																																	0
+PCH128_PVE_DUNKERQUE_OPERATION_DYNAMO	ダイナモ作戦	festival	solo	オペレーション「ダイナモ作戦」で 1 勝する。	0	-1																																	0
+PCH129_FillAlbum_Yamamoto	山本五十六	honorable	solo	「山本五十六」のコレクションを全て完成させる。	0	-1																																	0
+PCH130_YamamotoCompleted	山本五十六	honorable	solo	「山本五十六」キャンペーンの最終タスクを達成する。	0	-1																																	0
+PCH131_YamamotoCompletedExcellent	「山本五十六」名誉達成	honorable	solo	「山本五十六」キャンペーンの全タスクを達成する。	0	-1																																	0
+PCH132_FillAlbum_Wowsbirthday	2 周年	honorable	solo	「2 周年」コレクションを完成させる。	0	-1																																	0
+PCH133_BD2_CREDITS	無限連鎖講ではない!	festival	solo	エコノミーへの変更に順応しただけでなく、クレジットを稼ぐ方法も理解した。2 周年。	1	-1																																	0
+PCH134_BD2_GB	魔法の信管	festival	solo	伝説によると、マーリンという魔法使いがひと吹きした魔法の煙の中から、何とも素晴らしい徹甲弾が現れたのです。2 周年。	1	-1																																	0
+PCH135_BD2_CONTAINERS	あなた宛の荷物が届いています!	festival	solo	コンテナはプレイヤーと開発者を団結させます。何故なら、全ての人々の神経細胞は総じて同様に機能するからです。ゲームの 2 周年。	1	-1																																	0
+PCH136_BD2_HW2016	ボットの亡霊	festival	solo	Transylvania (トランシルヴァニア) を救うということは自転車に乗るようなものだ。ただしその自転車も、周囲の物も何もかも全部燃え盛っているのだが。しかも自転車を漕いでいるのは地獄の真っ只中ときた。2 周年。	1	-1																																	0
+PCH137_BD2_CAMO	ゴールドで塗装せよ!	festival	solo	「Tier X ゲームプレイ: 稼げないし面白くない、だとさ。」2 周年。	1	-1																																	0
+PCH138_BD2_JP	今や魚雷だけではない	festival	solo	これらの艦艇にもちゃんと主砲があるんです。そのことを忘れないでくれて本当にありがとうございます。2 周年。	1	-1																																	0
+PCH139_BD2_CAMPAIGNS	物語がここに	festival	solo	君もまず「名誉ある貢献」に挑戦したんだろ?2 周年。	1	-1																																	0
+PCH140_BD2_GE	見つけ出して沈めてやる!	festival	solo	精密なドイツの工業力と、意欲的なロシア人の気質の組み合わせ。これで失敗するはずがない。2 周年。	1	-1																																	0
+PCH141_BD2_ARP	俺のものを見てくれ!	festival	solo	これらの艦艇が気に入ったかな? この徽章を獲得したら、皆の知るところとなる。それでもいいのだね?2 周年。	1	-1																																	0
+PCH142_BD2_NY2016	ホッホッホ!	festival	solo	こんな新年を迎えたことはない。あらゆる点において。2 周年。	1	-1																																	0
+PCH143_BD2_CREW	艦長に敬礼	festival	solo	エリート艦長 EXP や色んな新スキルを実装したけど、皆無線方向探知についてばかり話してる。2 周年。	1	-1																																	0
+PCH144_BD2_RANKS	プロらしく	festival	solo	ランク戦ではそんなことをするのか?2 周年。	1	-1																																	0
+PCH145_BD2_USSR	C に急行せよ!	festival	solo	魚雷と主砲をタイミングよく適切に使用することは勝利に繋がるのですよ、同志!2 周年。	1	-1																																	0
+PCH146_BD2_FR	フランスパンにやられた	festival	solo	フランスパンは硬いが、砲弾に対しては無力である。2 周年。	1	-1																																	0
+PCH147_BD2_BISMARCK	ドイツよりも先に!	festival	solo	占星術師が「ビスマルク追撃戦」最終週の開始を宣言した。しかしそれは 2 時間遅れであった。2 周年。	1	-1																																	0
+PCH148_BD2_PVE	餌だ、食え!	festival	solo	「ボット共が調子に乗る前に徹底的に叩いてやった。」2 周年。	1	-1																																	0
+PCH149_Twitch_Prime	Prime Gaming	service_medal	solo	Prime Gaming に登録する。	0	-1																																	0
+PCH150_Twitch_WG	Twitch Welcome	service_medal	solo	海戦の世界へようこそ!	0	-1																																	0
+PCH151_WG_Fest_2017	Wargaming Fest 2017 参加者	service_medal	solo	WG Fest 2017 への参加に対して。	0	-1																																	0
+PCH152_EVENT_HW2017	エクソシスト	festival	solo	オペレーション「暗闇を照らす光」で 1 勝する。	0	-1																																	0
+PCH153_FillAlbum_HappyNewYear2018	北岬沖海戦	honorable	solo	「北岬沖海戦」コレクションを完成させる。	0	-1																																	0
+PCH154_NewYear2018BasicCompleted	北岬沖海戦	honorable	solo	「北岬沖海戦」キャンペーンの最終タスクを達成する。	0	-1																																	0
+PCH155_NewYear2018BasicCompletedExcellent	「北岬沖海戦」名誉達成	honorable	solo	「北岬沖海戦」キャンペーンの全タスクを達成する。	0	-1																																	0
+PCH156_NewYear2018EliteCompleted	年末年始大襲撃	honorable	solo	「年末年始大襲撃」キャンペーンの最終タスクを達成する。	0	-1																																	0
+PCH157_NewYear2018EliteCompletedExcellent	「年末年始大襲撃」名誉達成	honorable	solo	「年末年始大襲撃」キャンペーンの全タスクを達成する。	0	-1																																	0
+PCH158_CLAN_LEAGUE_1	Typhoon	clan	solo	Typhoon リーグに到達する。	1	-1																																	0
+PCH159_CLAN_LEAGUE_2	Storm	clan	solo	Storm リーグに到達する。	1	-1																																	0
+PCH160_CLAN_LEAGUE_3	Gale	clan	solo	Gale リーグに到達する。	1	-1																																	0
+PCH161_CLAN_LEAGUE_4	Squall	clan	solo	Squall リーグに到達する。	1	-1																																	0
+PCH162_CLAN_LEAGUE_TOP	Typhoon: ホットスポット	clan	solo	クラン戦シーズン 1 「ホットスポット」で最高リーグに到達し、Top 16 クランに入る。	0	-1																																	0
+PCH163_FillAlbum_HSF2018	ハイスクール・フリート	honorable	solo	「ハイスクール・フリート」のコレクションを全て完成させる。	0	-1																																	0
+PCH164_FillAlbum_Vivalafrance	"Vive La France"	honorable	solo	"Vive La France" コレクションを完成させる。	0	-1																																	0
+PCH165_KingOfTheSea	King of the Sea V ファイナリスト	clan	solo	努力と訓練は報われる! トーナメント King of the Sea で TOP 3 チームに入る。	0	-1																																	0
+PCH166_ViveLaFranceCompleted	フランスの金塊	honorable	solo	「フランスの金塊」キャンペーンの最終タスクを達成する。	0	-1																																	0
+PCH167_ViveLaFranceCompletedExcellent	「フランスの金塊」名誉達成	honorable	solo	「フランスの金塊」キャンペーンの全タスクを達成する。	0	-1																																	0
+PCH168_OneSmallStepForAMan	一人の人間にとっては小さな一歩	festival	solo	各艦種で 1 戦勝利する。	0	-1																																	0
+PCH169_Poekhali	Poekhali (行こう)!	festival	solo	1 戦中に敵に対して 1961 HP を超えるダメージを与える。	0	-1																																	0
+PCH170_ShieldsActivation	シールド・アクティベーター	festival	solo	1 戦中に航空機を 33 機撃墜する。	1	-1																																	0
+PCH171_NotSoTroopery	攻撃的なだけではない	festival	solo	999 基本 EXP (各種係数の適用前の値) を取得する。	1	-1																																	0
+PCH172_VacuumCleaner	宇宙の掃除屋	festival	solo	航空母艦で 1 戦中に敵艦艇を 3 隻撃沈する。	1	-1																																	0
+PCH173_Contributor	コントリビューター	service_medal	solo	コントリビューターチームメンバー	0	-1																																	0
+PCH174_AirDefenseExpert	対空エース	honorable	solo	1 戦中に敵機を 35 機以上撃墜する。巡洋艦および戦艦から発艦した敵機も対象。	1	-1																																	0
+PCH175_AirKing	空の王者	honorable	solo	1 戦中に自艦の航空機または自航空母艦の対空兵装を使用して敵機を 55 機以上撃墜する。巡洋艦および戦艦から発艦した敵機も対象。	1	-1																																	0
+PCH176_WinnerClanSeason_1	ホットスポット	clan	solo	クラン戦シーズン 1 で優勝する。	0	-1																																	0
+PCH177_TopLeagueClanSeason_2	Hurricane: 氷の群島	clan	solo	クラン戦シーズン 2 で Hurricane リーグに到達する。	0	-1																																	0
+PCH178_WinnerClanSeason_2	氷の群島	clan	solo	クラン戦シーズン 2 で優勝する。	0	-1																																	0
+PCH181_PVE_HON_FRAG_OBJ	鶏小屋の中の狐	honorable	solo	敵の補助艦艇を 5 隻以上撃沈する。	1	-1																																	0
+PCH182_PVE_HON_15_KOPECKS	Insert Coin	honorable	solo	魚雷を命中させ、180 度転回せよ! 古き良き日のように。	0	-1																																	0
+PCH183_FillAlbum_AmericanArc	アメリカ巡洋艦	honorable	solo	「アメリカ巡洋艦」のコレクションを全て完成させる。	0	-1																																	0
+PCH184_HelseyCompleted	Hit Hard! Hit Fast! Hit Often!	honorable	solo	"Hit hard! Hit fast! Hit often!" キャンペーンの最終タスクを達成する。	0	-1																																	0
+PCH185_HelseyCompletedExcellent	"Hit Hard! Hit Fast! Hit Often!" 名誉達成	honorable	solo	"Hit hard! Hit fast! Hit often!" キャンペーンの全タスクを達成する。	0	-1																																	0
+PCH186_KingOfTheSeaVI	King of the Sea VI ファイナリスト	clan	solo	努力と訓練は報われる! トーナメント King of the Sea で TOP 3 チームに入る。	0	-1																																	0
+PCH187_AVACommon	Go Navy!	service_medal	solo	"Go Navy!" コンペティションに参加する。	0	-1																																	0
+PCH188_AVAEagles	Eagles	service_medal	solo	"Go Navy!" コンペティションで Eagles チームへの忠誠を示す。	0	-1																																	0
+PCH189_AVASharks	Sharks	service_medal	solo	"Go Navy!" コンペティションで Sharks チームへの忠誠を示す。	0	-1																																	0
+PCH190_CollectorsClub	名誉コレクター	service_medal	solo	こんなにも素晴しい海軍ファンであることに感謝します。	0	-1																																	0
+PCH191_FillAlbum_Birthday2018	3 周年	honorable	solo	「3 周年」コレクションを完成させる。	0	-1																																	0
+PCH192_TopLeagueClanSeason_3	眠れる巨人	clan	solo	クラン戦シーズン 3 で Hurricane リーグに到達する。	0	-1																																	0
+PCH193_WinnerClanSeason_3	眠れる巨人	clan	solo	クラン戦シーズン 3 で優勝する。	0	-1																																	0
+PCH194_LeaderboardChampion	英雄達の絆	service_medal	solo	"Royal Navy" イベントのランキングでトッププレイヤーの一員となったことに対して。	1	-1																																	0
+PCH195_FillAlbum_Ovechkin	グレート・エイト	honorable	solo	「グレート・エイト」コレクションを完成させる。	0	-1																																	0
+PCH196_Greateight	Four-Goal Haul	festival	solo	敵艦艇を 4 隻以上撃破する。	1	-1																																	0
+PCH197_DmmGames	"DMM Games" 実績	service_medal	solo	DMM Games での本ゲームのリリースを記念した限定実績。	1	-1																																	0
+PCH198_PVE_HALLOWEEN_2018_COMPLETE	海中に潜む恐怖	festival	solo	オペレーション「海中に潜む恐怖」で 1 勝する。	0	-1																																	0
+PCH199_PVE_ALL_THREE_HALLOWEEN_COMPLETE	光の戦士	festival	solo	オペレーション「Transylvania を救え」「暗闇を照らす光」「海中に潜む恐怖」で 5 スターを達成して勝利する。	0	-1																																	0
+PCH200_RASPUTIN	逢魔時艦隊旗艦	festival	solo	「逢魔時バトル」で、戦艦 Rasputin を使用して 1 勝する。	0	-1																																	0
+PCH201_KingOfTheSeaVII	King of the Sea VII ファイナリスト	clan	solo	努力と訓練は報われる! トーナメント King of the Sea で TOP 3 チームに入る。	0	-1																																	0
+PCH202_LeaderboardChampionClan	英雄達の団結	clan	solo	"Royal Navy" イベント中に実績「英雄達の絆」を取得したクランプレイヤーに授与。	0	-1																																	0
+PCH203_FillAlbum_BritishArc	イギリス海軍の駆逐艦	honorable	solo	「イギリス海軍の駆逐艦」コレクションを完成させる。	0	-1																																	0
+PCH204_NewYear2019PEFCompleted	マイティープリンツ	honorable	solo	「マイティープリンツ」キャンペーンの最終タスクを達成する。	0	-1																																	0
+PCH205_NewYear2019PEFCompletedExcellent	「マイティープリンツ」名誉達成	honorable	solo	「マイティープリンツ」キャンペーンの全タスクを達成する。	0	-1																																	0
+PCH206_NewYear2019SteelQuestCompleted	鋼鉄のモンスター	honorable	solo	「鋼鉄のモンスター」キャンペーンの最終タスクを達成する。	0	-1																																	0
+PCH207_NewYear2019SteelQuestCompletedExcellent	「鋼鉄のモンスター」名誉達成	honorable	solo	「鋼鉄のモンスター」キャンペーンの全タスクを達成する。	0	-1																																	0
+PCH208_NewYear2019Leaderboard	究極の意志	heroic	solo	「殿下の名の下に!」イベントでランキングに加わったことに対して。	1	-1																																	0
+PCH209_FillAlbum_HappyNewYear2019	ベル・エポック	honorable	solo	「ベル・エポック」のコレクションを全て完成させる。	0	-1																																	0
+PCH210_TopLeagueClanSeason_4	Hurricane: 北方	clan	solo	クラン戦シーズン 4 で Hurricane リーグに到達する。	0	-1																																	0
+PCH211_WinnerClanSeason_4	北方	clan	solo	クラン戦シーズン 4 で優勝する。	0	-1																																	0
+PCH212_LeaderboardTop100	上位 100	service_medal	solo	ランキングで Top 100 に入る。	1	-1																																	0
+PCH213_FillAlbum_Brit_CVArc	艦載機	honorable	solo	「艦載機」のコレクションを全て完成させる。	0	-1																																	0
+PCH214_EV1APR19_EPICENTER2	真の気概	festival	solo	キーエリアを 5 回以上占領する。	1	-1																																	0
+PCH215_EV1APR19_DOMINATION1	軌道外艦砲射撃	festival	solo	コントロールポイントが有効化された際にその境界線の内部に留まる。1 戦勝利し生還する。	1	-1																																	0
+PCH216_EV1APR19_DOMINATION2	もう誰にも止められない!	festival	solo	1 戦を最初の 10 分で勝利し、敵艦艇を 1 隻撃沈するか 40,000 HP のダメージを与える。	1	-1																																	0
+PCH217_EV1APR19_ATTDEF1	銀河の防衛者	festival	solo	発生装置を 1 基も失うことなく 100,000 HP 以上のダメージを与え、1 戦勝利し生還する。防衛側チームで達成可能。	1	-1																																	0
+PCH218_EV1APR19_ATTDEF2	殲滅者	festival	solo	2 基以上の発生装置とステーションを撃破する。攻撃側チームで達成可能。	1	-1																																	0
+PCH219_EV1APR19_TORPEDO1	魚雷に讃えられし者	festival	solo	自艦の基本 HP の 200% を超えるダメージを被る。	1	-1																																	0
+PCH220_EV1APR19_TORPEDO2	火星的大打撃	festival	solo	敵艦艇を 10 秒以内に 2 隻撃沈する。	1	-1																																	0
+PCH221_EV1APR19_TORPEDO3	決闘しないか?	festival	solo	敵艦艇 1 隻を体当たりによって撃沈する。	1	-1																																	0
+PCH222_EV1APR19_TORPEDO4	全力射撃	festival	solo	3 隻を 3 種類の異なる方法で撃沈する。	1	-1																																	0
+PCH223_EV1APR19_TORPEDO5	マスターブラスター	festival	solo	副砲で敵艦艇に 20,000 HP のダメージを与える。	1	-1																																	0
+PCH224_EV1APR19_ALLROUNDER	星に祭られしオリンピア人	festival	solo	銀河間ゲームズでの勝利に対して。	0	-1																																	0
+PCH225_EV1APR19_EPICENTER1	注目の的	festival	solo	任意のゾーン内の敵艦艇を 3 隻以上撃沈する。	1	-1																																	0
+PCH226_Honor	Honor	service_medal	solo	"Victory" コンペティションにおける Team Honor への忠誠心に対して。 	0	-1																																	0
+PCH227_Glory	Glory	service_medal	solo	"Victory" コンペティションにおける Team Glory への忠誠心に対して。	0	-1																																	0
+PCH228_Victory	Victory	service_medal	solo	"Victory" コンペティションでの勇敢さ、勇気、そして勝利への意志に対して。	0	-1																																	0
+PCH229_KingOfTheSeaVIII	King of the Sea VIII ファイナリスト	clan	solo	努力と訓練は報われる! トーナメント King of the Sea で TOP 3 チームに入る。	0	-1																																	0
+PCH230_FillAlbum_Azurlane	アズールレーン	honorable	solo	「アズールレーン」のコレクションを全て完成させる。	0	-1																																	0
+PCH232_JollyRoger	海賊: ゴールド	service_medal	solo	ゴールドリーグでランク 1 に到達する。	1	-1																																	0
+PCH233_TopLeagueClanSeason_5	Hurricane: 火の地	clan	solo	クラン戦シーズン 5 で Hurricane リーグに到達する。	0	-1																																	0
+PCH234_WinnerClanSeason_5	火の地	clan	solo	クラン戦シーズン 5 で優勝する。	0	-1																																	0
+PCH235_FillAlbum_SovietBB	「祖国への奉仕」	honorable	solo	「祖国への奉仕」コレクションを完成させる。	0	-1																																	0
+PCH236_EV_Post_Apocalypse2019_Winner	真のサバイバリスト	festival	solo	戦闘で勝利し生還する。	0	-1																																	0
+PCH237_CvCBrawl1	Top 1	clan	solo	第 1 位を達成する。	1	-1																																	0
+PCH238_CvCBrawl10	Top 10	clan	solo	Top 10 クランに入る。	1	-1																																	0
+PCH239_CvCBrawl100	Top 100	clan	solo	Top 100 クランに入る。	1	-1																																	0
+PCH240_CvCBrawl1000	Top 1000	clan	solo	Top 1000 クランに入る。	1	-1																																	0
+PCH241_Stream	Stream Drop!	service_medal	solo	このコンバットミッションを達成した名誉ある観戦者に対して。	1	-1																																	0
+PCH242_FillAlbum_FrenchDD	レジオンドヌール	honorable	solo	「レジオンドヌール」のコレクションを全て完成させる。	0	-1																																	0
+PCH243_TopLeagueClanSeason_6	Hurricane: 隣接勢力	clan	solo	クラン戦シーズン 6 で Hurricane リーグに到達する。	0	-1																																	0
+PCH244_WinnerClanSeason_6	隣接勢力	clan	solo	クラン戦シーズン 6 で優勝する。	0	-1																																	0
+PCH245_KingOfTheSeaIX	King of the Sea IX ファイナリスト	clan	solo	努力と訓練は報われる! トーナメント King of the Sea で TOP 3 チームに入る。	0	-1																																	0
+PCH246_TopLeagueClanSeason_7	Hurricane: クラッシュゾーンα	clan	solo	クラン戦シーズン 7 で Hurricane リーグに到達する。	0	-1																																	0
+PCH247_WinnerClanSeason_7	クラッシュゾーン α	clan	solo	クラン戦シーズン 7 で優勝する。	0	-1																																	0
+PCH248_FillAlbum_ITCA	決意を持って迅速に	honorable	solo	「決意を持って迅速に」コレクションを完成させる。	0	-1																																	0
+PCH249_FillAlbum_NY20	造船	honorable	solo	「造船」コレクションを全て完成させる。	0	-1																																	0
+PCH250_CLANST	CST 参加者	service_medal	solo	開発チームはクラン・スーパーテスト参加者の皆さまに深く感謝いたします。	0	-1																																	0
+PCH251_TopLeagueClanSeason_8	Hurricane: 幸運の海	clan	solo	クラン戦シーズン 8 で Hurricane リーグに到達する。	0	-1																																	0
+PCH252_WinnerClanSeason_8	幸運の海	clan	solo	クラン戦シーズン 8 で優勝する。	0	-1																																	0
+PCH253_FillAlbum_KOTS	King of the Sea	honorable	solo	「King of the Sea」コレクションを完成させる。	0	-1																																	0
+PCH254_FillAlbum_CAPT	悪い例: 舞台裏	honorable	solo	「悪い例: 舞台裏」コレクションを全て完成させる。	0	-1																																	0
+PCH255_KingOfTheSeaX	King of the Sea X ファイナリスト	clan	solo	努力と訓練は報われる! トーナメント King of the Sea で TOP 3 チームに入る。	0	-1																																	0
+PCH256_TopLeagueClanSeason_9	Hurricane: 戦士の道	clan	solo	クラン戦シーズン 9 で Hurricane リーグに到達する。	0	-1																																	0
+PCH257_WinnerClanSeason_9	戦士の道	clan	solo	クラン戦シーズン 9 で優勝する。	0	-1																																	0
+PCH258_Jerzy_SwirskiCompleted	強い意志	honorable	solo	「強い意志」キャンペーンの最終タスクを達成する。	0	-1																																	0
+PCH259_Jerzy_SwirskiCompletedExcellent	「強い意志」名誉達成	honorable	solo	「強い意志」キャンペーンの全タスクを達成する。	0	-1																																	0
+PCH260_TopLeagueClanSeason_10	Hurricane: ループ	clan	solo	クラン戦シーズン 10 で Hurricane リーグに到達する。	0	-1																																	0
+PCH261_WinnerClanSeason_10	ループ	clan	solo	クラン戦シーズン 10 で優勝する。	0	-1																																	0
+PCH262_FillAlbum_GF097	ドイツ海軍	honorable	solo	「ドイツ海軍」コレクションを全て完成させる。	0	-1																																	0
+PCH263_ParagonDrop10	造船技師補	honorable	solo	艦艇ブランチの進捗を 10 回リセットする。	0	-1																																	0
+PCH264_ParagonDrop50	上級造船技師	honorable	solo	艦艇ブランチの進捗を 50 回リセットする。	0	-1																																	0
+PCH265_ParagonDrop100	造船監督官	honorable	solo	艦艇ブランチの進捗を 100 回リセットする。	0	-1																																	0
+PCH266_ParagonDrop150	主任造船監督官	honorable	solo	艦艇ブランチの進捗を 150 回リセットする。	0	-1																																	0
+PCH267_TopLeagueClanSeason_11	Hurricane: 北方海域	clan	solo	クラン戦シーズン 11 で Hurricane リーグに到達する。	0	-1																																	0
+PCH268_WinnerClanSeason_11	北方海域	clan	solo	クラン戦シーズン 11 で優勝する。	0	-1																																	0
+PCH269_FillAlbum_EpochsOfShips	海軍の五つの時代	honorable	solo	「海軍の五つの時代」コレクションを全て完成させる。	0	-1																																	0
+PCH270_EpochsOfShipsCompleted	海軍の五つの時代	honorable	solo	「海軍の五つの時代」キャンペーンの最終タスクを達成する。	0	-1																																	0
+PCH271_EpochsOfShipsCompletedExcellent	「海軍の五つの時代」名誉達成	honorable	solo	「海軍の五つの時代」キャンペーンの全タスクを達成する。	0	-1																																	0
+PCH272_KingOfTheSeaXI	King of the Sea XI ファイナリスト	clan	solo	努力と訓練は報われる! トーナメント King of the Sea で TOP 3 チームに入る。	0	-1																																	0
+PCH273_ClanGrandFleet	恐るべき艦隊	clan	solo	全てのクランミッションを達成する。	0	-1																																	0
+PCH274_EV2020_OCTAGON	最後のチャンス	festival	solo	オクタゴンで 1 勝する。	1	-1																																	0
+PCH275_EV2020_PORTAL	ポータルの向こう側	festival	solo	ポータルを通じて脱出する。	1	-1																																	0
+PCH276_JollyRogerBronze	海賊: ブロンズ	service_medal	solo	ブロンズリーグでランク 1 に到達する。	1	-1																																	0
+PCH277_JollyRogerSilver	海賊: シルバー	service_medal	solo	シルバーリーグでランク 1 に到達する。	1	-1																																	0
+PCH278_FillAlbum_USABB_0910	常に勇敢	honorable	solo	「常に勇敢」コレクションを完成させる。	0	-1																																	0
+PCH279_STRASBOURGCompleted	Strasbourg を求めて	honorable	solo	「Strasbourg を求めて」キャンペーンの最終タスクを達成する。	0	-1																																	0
+PCH280_STRASBOURGCompletedExcellent	「Strasbourg を求めて」名誉達成	honorable	solo	「Strasbourg を求めて」キャンペーンの全タスクを達成する。	0	-1																																	0
+PCH281_SantasNY2Completed	艦艇と命運	honorable	solo	「艦艇と命運」キャンペーンの最終タスクを達成する。	0	-1																																	0
+PCH282_SantasNY2CompletedExcellent	「艦艇と命運」名誉達成	honorable	solo	「艦艇と命運」キャンペーンの全タスクを達成する。	0	-1																																	0
+PCH283_TopLeagueClanSeason_12	Hurricane: ギリシャ	clan	solo	クラン戦シーズン 12 で Hurricane リーグに到達する。	0	-1																																	0
+PCH284_WinnerClanSeason_12	ギリシャ	clan	solo	クラン戦シーズン 12 で優勝する。	0	-1																																	0
+PCH287_EV2021_GIANTSLAYER	巨人を狩りし者	festival	solo	Aurora を撃沈する。	1	-1																																	0
+PCH288_EV2021_MODULE	未来のエンジニア	festival	solo	「大物狩り」イベントで使用可能な全艦艇とそれらのモジュールを研究する。	1	-1																																	0
+PCH289_EV2021_TOOLATE	第八の壁を破壊	festival	solo	かつて激しい海戦が繰り広げられた場所へ。	0	-1																																	0
+PCH290_EV2021_PORTAL	出口は常にある!	festival	solo	ポータルを通じて脱出する。	1	-1																																	0
+PCH291_EV2021_MONSTER	凶暴	festival	solo	1 戦中に艦艇かモンスターを 10 を撃沈/撃破する。	1	-1																																	0
+PCH292_NavalBattleAxis	枢軸国	festival	solo	枢軸国側でプレイし、10 戦勝利する。	0	-1																																	0
+PCH293_NavalBattleAllies	連合国	festival	solo	連合国側でプレイし、10 戦勝利する。	0	-1																																	0
+PCH294_FillAlbum_GERDD	ドイツの駆逐艦	honorable	solo	「ドイツの駆逐艦」コレクションを全て完成させる。	0	-1																																	0
+PCH295_KingOfTheSeaXII	King of the Sea XII ファイナリスト	clan	solo	努力と訓練は報われる! トーナメント King of the Sea で TOP 3 チームに入る。	0	-1																																	0
+PCH296_General_EventPlay	グランドバトル	festival	solo	いずれかの超艦艇を使用して「グランドバトル」イベントに参加する。	0	-1																																	0
+PCH297_General_HannoverKill	Z 計画	festival	solo	Hannover 級超戦艦を 3 隻撃沈する。	0	-1																																	0
+PCH298_General_SatsumaKill	マル 6 計画	festival	solo	薩摩型超戦艦を 3 隻撃沈する。	0	-1																																	0
+PCH299_TopLeagueClanSeason_13	Hurricane: 砂漠の涙	clan	solo	クラン戦シーズン 13 で Hurricane リーグに到達する。	0	-1																																	0
+PCH300_WinnerClanSeason_13	砂漠の涙	clan	solo	クラン戦シーズン 13 で優勝する。	0	-1																																	0
+PCH301_WINNERTEAM_PA	無双のトリオ	heroic	solo	1 戦勝利し、全てのチームメンバーが生還する。	1	-1																																	0
+PCH302_DOUBLEKILL_PA	ダブル・キャッチ	festival	solo	敵艦艇を 10 秒以内に 2 隻撃沈する。	1	-1																																	0
+PCH303_RAM_PA	トラブルメーカー	festival	solo	1 戦中に 2 隻の敵艦艇を体当たりによって撃沈する。	1	-1																																	0
+PCH304_DREADNOUGHT_PA	不滅	festival	solo	自艦の基本 HP の 200% を上回るダメージを被った上で生還する。	1	-1																																	0
+PCH305_3WAYSTOKILL_PA	解体業者	festival	solo	1 戦中に 3 隻の敵艦艇を 3 種類の方法で撃沈する。	1	-1																																	0
+PCH306_ENGINEER_PA	戦闘兵器	honorable	solo	全ての派閥の全艦艇を入手する。	0	-1																																	0
+PCH307_SWEETPORT_PA	ハニー、ただいま!	festival	solo	「水没都市」マップの港で汽笛を使用する。	0	-1																																	0
+PCH308_LONGTIME_PA	歴戦の風格	festival	solo	1 戦中に 10 分間を超えて生存し続ける。	1	-1																																	0
+PCH309_COLLECTOR_PA	略奪者	festival	solo	1 戦中に航空機によって投下された消耗品を 5 個確保する。	1	-1																																	0
+PCH310_HIFROMHELL_PA	温かい挨拶	festival	solo	野火の中にいる時に敵艦艇を 1 隻撃沈する。	1	-1																																	0
+PCH311_TopLeagueClanSeason_17	Hurricane: カイマン	clan	solo	クラン戦シーズン 17 で Hurricane リーグに到達する。	0	-1																																	0
+PCH312_WinnerClanSeason_17	カイマン	clan	solo	クラン戦シーズン 17 で優勝する。	0	-1																																	0
+PCH313_Independance_day	アメリカ独立記念日	service_medal	solo	アメリカ独立記念日の祝賀に参加する。	0	-1																																	0
+PCH315_TopLeagueClanSeason_14	Hurricane: ピラニア	clan	solo	クラン戦シーズン 14 で Hurricane リーグに到達する。	0	-1																																	0
+PCH316_WinnerClanSeason_14	ピラニア	clan	solo	クラン戦シーズン 14 で優勝する。	0	-1																																	0
+PCH317_TopLeagueClanSeason_15	Hurricane: イッカク	clan	solo	クラン戦シーズン 15 で Hurricane リーグに到達する。	0	-1																																	0
+PCH318_WinnerClanSeason_15	イッカク	clan	solo	クラン戦シーズン 15 で優勝する。	0	-1																																	0
+PCH319_TopLeagueClanSeason_16	Hurricane: アホウドリ	clan	solo	クラン戦シーズン 16 で Hurricane リーグに到達する。	0	-1																																	0
+PCH320_WinnerClanSeason_16	アホウドリ	clan	solo	クラン戦シーズン 16 で優勝する。	0	-1																																	0
+PCH325_TopLeagueClanSeason_19	Hurricane: バラクーダ	clan	solo	クラン戦シーズン 19 で Hurricane リーグに到達する。	0	-1																																	0
+PCH326_WinnerClanSeason_19	バラクーダ	clan	solo	クラン戦シーズン 19 で優勝する。	0	-1																																	0
+PCH327_TopLeagueClanSeason_20	Hurricane: サラマンダー	clan	solo	クラン戦シーズン 20 で Hurricane リーグに到達する。	0	-1																																	0
+PCH328_WinnerClanSeason_20	サラマンダー	clan	solo	クラン戦シーズン 20 で優勝する。	0	-1																																	0
+PCH329_TopLeagueClanSeason_21	Hurricane: マッコウクジラ	clan	solo	クラン戦シーズン 21 で Hurricane リーグに到達する。	0	-1																																	0
+PCH330_WinnerClanSeason_21	マッコウクジラ	clan	solo	クラン戦シーズン 21 で優勝する。	0	-1																																	0
+PCH331_TopLeagueClanSeason_22	Hurricane: アナコンダ	clan	solo	クラン戦シーズン 22 で Hurricane リーグに到達する。	0	-1																																	0
+PCH332_WinnerClanSeason_22	アナコンダ	clan	solo	クラン戦シーズン 22 で優勝する。	0	-1																																	0
+PCH333_TopLeagueClanSeason_23	Hurricane: トリトン	clan	solo	クラン戦シーズン 23 で Hurricane リーグに到達する。	0	-1																																	0
+PCH334_WinnerClanSeason_23	トリトン	clan	solo	クラン戦シーズン 23 で優勝する。	0	-1																																	0
+PCH335_TopLeagueClanSeason_24	Hurricane: シードラゴン	clan	solo	クラン戦シーズン 24 で Hurricane リーグに到達する。	0	-1																																	0
+PCH336_WinnerClanSeason_24	シードラゴン	clan	solo	クラン戦シーズン 24 で優勝する。	0	-1																																	0
+PCH337_FillAlbum_Somme126	ソンムの戦い	honorable	solo	「ソンムの戦い」コレクションを完成させる。	0	-1																																	0
+PCH338_FillAlbum_Jap_BB_EA_Dragons	英雄の激突	honorable	solo	「英雄の激突」コレクションを完成させる。	0	-1																																	0
+PCH347_FillAlbum_TFTM_108	トランスフォーマー ザ・ムービー 35 周年	honorable	solo	「トランスフォーマー ザ・ムービー 35 周年」コレクションを全て完成させる。	0	-1																																	0
+PCH348_CONVOY_TransportsAreAlive	安全なルート	festival	solo	輸送船を 1 隻も失わずに勝利する。敵艦艇に自艦の基本 HP の 50% 以上のダメージを与えること。	1	-1																																	0
+PCH350_CONVOY_AntiTorpedoProtection	生ける盾	festival	solo	味方の輸送船から半径 2 km 圏内で敵の魚雷を 2 本以上被雷する。	1	-1																																	0
+PCH351_CONVOY_TwoToOne	鋼の神経	festival	solo	敵艦艇数が味方艦艇数の 2 倍以上の状態で勝利かつ生還する。敵艦艇に自艦の基本 HP の 50% 以上のダメージを与えること。	1	-1																																	0
+PCH353_CONVOY_FlawlessVictory	巧みな仕事	festival	solo	味方艦艇を 1 隻も失わずに全ての輸送船を撃沈して勝利する。敵艦艇に自艦の基本 HP の 50% 以上のダメージを与えること。	1	-1																																	0
+PCH354_CONVOY_2Transports	襲撃	festival	solo	輸送船を 2 隻撃沈する。	1	-1																																	0
+PCH356_RVR_player	勇気の激突	service_medal	solo	「勇気の激突」イベントに積極的に参加する!	0	-1																																	0
+PCH357_BD6_WELCOME	船のパーティー	festival	solo	パーティーに参加して色んなコンテストに挑戦しよう。6 周年。	0	-1																																	0
+PCH358_BD6_DESTROYERS	手首の捻り	festival	solo	どんなに足が速いゲストにだって引けを取ることはない!6 周年。	0	-1																																	0
+PCH359_BD6_BATTLESHIPS	ソーシャル・ライオン	festival	solo	どんなに疲れ知らずのゲストにも負けず最後までどんちゃん騒ぎ！6 周年。	0	-1																																	0
+PCH360_BD6_CRUISERS	パーティーの頭脳	festival	solo	頭の切れるアイツを窮地に追い込んでやろう!6 周年。	0	-1																																	0
+PCH361_BD6_AIRCARRIERS	お節介	festival	solo	シャイなゲストを皆が集まる所に連れ出そう。6 周年。	0	-1																																	0
+PCH362_BD6_GETALLACHIEVEMENTS	娯楽の達人	festival	solo	勝利を重ねてパーティーを盛り上げよう!6 周年。	0	-1																																	0
+PCH363_FillAlbum_WOWSBD6	6 周年	honorable	solo	「6 周年」コレクションを完成させる。	0	-1																																	0
+PCH364_MainCaliber_Squad	攻撃チーム	squad	solo	分艦隊で全敵艦艇の基本 HP の合計値の 50% 以上のダメージを与える。	1	-1																																	0
+PCH365_ClassDestroy_Squad	全体的攻勢	squad	solo	分艦隊で異なる艦種の艦艇を 3 隻撃沈する。	1	-1																																	0
+PCH366_Warrior_Squad	連係攻撃	squad	solo	分艦隊で 7 隻以上の敵艦艇を撃沈する。	1	-1																																	0
+PCH367_Support_Squad	協働	squad	solo	分艦隊で 10 隻以上の敵艦艇にダメージを与える。与えたダメージが各敵艦艇の基本 HP の 20% 以上であること。	1	-1																																	0
+PCH368_Frag_Squad	戦友	squad	solo	1 戦中に分艦隊の各メンバーがそれぞれ 2 隻以上の敵艦艇を撃沈する。	1	-1																																	0
+PCH369_Navoeval	Sea Smackdown	service_medal	solo	「Sea Smackdown」のエピソードに採用される。	1	-1																																	0
+PCH370_KingOfTheSeaXIII	King of the Sea XIII ファイナリスト	clan	solo	努力と訓練は報われる! トーナメント King of the Sea で TOP 3 チームに入る。	0	-1																																	0
+PCH371_RVR_New_Year	新年の夜	service_medal	solo	「新年の夜」イベントに参加する!	0	-1																																	0
+PCH372_FillAlbum_NY2022	海軍のクリスマスと新年	honorable	solo	「海軍のクリスマスと新年」コレクションを全て完成させる。	0	-1																																	0
+PCH373_Shipsmaster_3	艦隊小百科	service_medal	solo	ウェブサイト上のミニゲームで、艦艇ブランチに関する良好な知識を披露する。	1	-1																																	0
+PCH374_Shipsmaster_2	艦隊中百科	service_medal	solo	ウェブサイト上のミニゲームで、艦艇ブランチに関する豊富な知識を披露する。	1	-1																																	0
+PCH375_Shipsmaster_1	艦隊大百科	service_medal	solo	ウェブサイト上のミニゲームで、艦艇ブランチに関する卓越した知識を披露する。	1	-1																																	0
+PCH377_2AIRSHIPS_VICTORYCLAIMED	奪い取った栄光	festival	solo	敵飛行船が目的地へと到着する間際に敵艦艇を殲滅することで、敵から勝利を奪い取る。	1	-1																																	0
+PCH378_EPT	EAT PLAY TALK 2021	service_medal	solo	オンラインイベント「EAT PLAY TALK」に積極的に参加する。	0	-1																																	0
+PCH379_2AIRSHIPS_STOPPER	牽制	festival	solo	敵飛行船を 1 分間に渡って継続的に減速させる。	1	-1																																	0
+PCH380_2AIRSHIPS_5MINUTESWINNER	不屈	festival	solo	最後の 5 分間に継続的に味方飛行船の付近に留まって 1 戦勝利する。	1	-1																																	0
+PCH381_2AIRSHIPS_PHOTOFINISH	際どい勝負	festival	solo	味方飛行船を僅差で敵飛行船より先に目的地に到着させ、勝利する。戦闘終了時に味方飛行船を増速させているか、敵飛行船を減速させている必要がある。	1	-1																																	0
+PCH382_2AIRSHIPS_INCENTER	着実な前進と敵の阻止	festival	solo	味方飛行船を増速させつつ、同時に敵飛行船を減速させる。	1	-1																																	0
+PCH388_KOTS14	King of the Sea XIV ファイナリスト	clan	solo	努力と訓練は報われる! トーナメント King of the Sea で TOP 3 チームに入る。	0	-1																																	0
+PCH389_FillAlbum_May_Day	連合軍の英雄達	honorable	solo	「連合軍の英雄達」コレクションを完成させる。	0	-1																																	0
+PCH390_IT_DD_coll	イタリア駆逐艦	honorable	solo	「イタリア駆逐艦」コレクションを完成させる。	0	-1																																	0
+PCH391_TopLeagueClanSeason_18	Hurricane: サイレン	clan	solo	クラン戦シーズン 18 で Hurricane リーグに到達する。	0	-1																																	0
+PCH392_WinnerClanSeason_18	サイレン	clan	solo	クラン戦シーズン 18 で優勝する。	0	-1																																	0
+PCH393_RVR_UK_BB	造船王	service_medal	solo	「造船王」イベントへの積極的な参加に対して!	0	-1																																	0
+PCH394_FillAlbum_WOWSBD7_2022	七つの海	honorable	solo	「七つの海」コレクションを完成させる。	0	-1																																	0
+PCH395_CombatRecon	戦闘偵察	heroic	solo	自艦の発見・観測によってチームによる敵艦艇へのダメージをアシストする。アシストしたダメージの量が敵チームの全艦艇の合計基本 HP の 20% 以上である必要がある。加えて、敵艦艇にダメージを与える。与えたダメージの量が敵チームの全艦艇の合計基本 HP の 5% 以上である必要がある。	1	-1																																	0
+PCH396_KeyTarget_Prime	バウンティ・ハンター	festival	solo	「バウンティ」マーカー付きの敵艦艇を 1 隻撃沈する。	1	-1																																	0
+PCH397_EliteTournament22	Elite Tournament 2022 Contestant	service_medal	solo	You attended Elite Tournament 2022 and became a finalist. Congratulations!	0	-1																																	0
+PCH398_RVR_New_Year_2023	キャロル・クラッシュ	service_medal	solo	「キャロル・クラッシュ」コンペティションに積極的に参加する。	0	-1																																	0
+PCH399_EPT_2022	EAT PLAY TALK 2022	service_medal	solo	オンラインイベント「EAT PLAY TALK」に積極的に参加する。	0	-1																																	0
+PCH400_FillAlbum_PA_Sazhenbing	薩鎮氷の時代	honorable	solo	「薩鎮氷の時代」コレクションを完成させる。	0	-1																																	0
+PCH401_KOTS15	King of the Sea XV ファイナリスト	clan	solo	努力と訓練は報われる! トーナメント King of the Sea で TOP 3 チームに入る。	0	-1																																	0
+PCH402_FIRST_APRIL_2023	お風呂での大騒動	festival	solo	お風呂でゴム製のアヒルによる激戦に挑み、無傷で戦闘を終える。	0	-1																																	0
+PCH403_KeyTarget_At_Gunpoint	神出鬼没のバウンティ	festival	solo	バウンティとして指定された艦艇でプレイし、5 戦で勝利かつ生還する。	1	-1																																	0
+PCH404_KeyTarget_CounterPunch	危険なバウンティ	festival	solo	バウンティ艦艇でプレイし、1 戦中に敵艦艇を 4 隻撃沈する。	1	-1																																	0
+PCH405_KeyTarget_Matter_Of_Honor	ハンター・バウンティ	festival	solo	バウンティ艦艇を使用して敵のバウンティ艦艇を 1 隻撃沈する。	1	-1																																	0
+PCH406_KeyTarget_Fire_On_Myself	デコイ・ミッション	festival	solo	1,000,000 HP の潜在ダメージを被り、取得 EXP でチーム内 TOP 3 を達成する。味方のバウンティ艦艇が生還する必要がある。	1	-1																																	0
+PCH409_StratOps_USSR_SS_EA	英雄達の列島	service_medal	solo	「英雄達の列島」イベントで究極の褒賞を得るために必要な領域群を確保する。	0	-1																																	0
+PCH410_StratOps_USSR_SS_EA_FULL	英雄達の列島: 海上覇権	service_medal	solo	「英雄達の列島」イベントで全ての領域を制圧する。	0	-1																																	0
+PCH411_EVENT_HW2023	Transylvania の最後の航海	festival	solo	オペレーション「Transylvania の最後の航海」で 1 勝する。	0	-1																																	0
+PCH412_KOTS16	King of the Sea XVI ファイナリスト	clan	solo	努力と訓練は報われる! トーナメント King of the Sea で TOP 3 チームに入る。	0	-1																																	0

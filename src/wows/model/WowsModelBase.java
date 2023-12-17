@@ -37,7 +37,7 @@ public final class WowsModelBase
 		{
 			buffer.append( DELIMITER );
 		}
-		buffer.append( value );
+		buffer.append( value.replaceAll("\t","").replaceAll("\n","").replaceAll("\r","") );
 	}
 	public static void appendString( StringBuffer buffer , int value , boolean addDelimiter )
 	{

@@ -26,13 +26,18 @@ public class SubtractAccountBattleApp extends AbstractApp
 				File					outSvrFolder		= new File( outBaseFolder , args[2] );
 				File					outThisFolder		= new File( outSvrFolder  , args[3] );
 				File					outFolder			= new File( outThisFolder , args[6] );
+				String					since				= "0000/00/00 00:00:00";
+				if( args.length >= 8 )
+				{
+					since									= args[7];
+				}
 				File					logFile				= new File( outFolder     , "error.log" );
 				SubtractAccountBattleApp	instance		= new SubtractAccountBattleApp( logFile );
-				instance.execute( inThisFolder , inPrevFolder , outFolder );
+				instance.execute( inThisFolder , inPrevFolder , outFolder , since );
 			}
 			else
 			{
-				System.out.println( "usage : java SubtractAccountBattleApp [in base folder] [out base folder] [server] [date this] [date prev] [in folder] [out folder]" );
+				System.out.println( "usage : java SubtractAccountBattleApp [in base folder] [out base folder] [server] [date this] [date prev] [in folder] [out folder] (since)" );
 			}
 		}
 		catch( Exception ex )
@@ -45,7 +50,7 @@ public class SubtractAccountBattleApp extends AbstractApp
 	{
 		super( logFile );
 	}
-	public void execute( File inThisFolder , File inPrevFolder , File outFolder ) throws Exception
+	public void execute( File inThisFolder , File inPrevFolder , File outFolder , String since ) throws Exception
 	{
 		outFolder.mkdirs();
 		File[]							inThisFiles			= inThisFolder.listFiles( new XFileFilter.Text() );
@@ -55,11 +60,11 @@ public class SubtractAccountBattleApp extends AbstractApp
 			outLog( String.format( "%6d/%6d" , ix , inThisFiles.length ) + ":" + inThisFile.getName() );
 			File						inPrevFile			= new File( inPrevFolder , inThisFile.getName() );
 			File						outFile				= new File( outFolder    , inThisFile.getName() );
-			processSubtract( inThisFile , inPrevFile , outFile );
+			processSubtract( inThisFile , inPrevFile , outFile , since );
 			ix++;
 		}
 	}
-	protected void processSubtract( File inThisFile , File inPrevFile , File outFile ) throws IOException
+	protected void processSubtract( File inThisFile , File inPrevFile , File outFile , String since ) throws IOException
 	{
 		List<AccountBattleInfo>			outModels			= new ArrayList<AccountBattleInfo>();
 		List<AccountBattleInfo>			thisModels			= Models.loadModels( inThisFile , new AccountBattleInfo() , WowsModelBase.cs );
@@ -80,6 +85,13 @@ public class SubtractAccountBattleApp extends AbstractApp
 					else
 					{
 						thisModel.subtract( prevModel );
+					}
+				}
+				else
+				{
+					if( thisModel.createdAt.compareTo( since ) < 0 )
+					{
+						thisModel.clean();
 					}
 				}
 				if( thisModel.getTotalBattles().signum() > 0 )

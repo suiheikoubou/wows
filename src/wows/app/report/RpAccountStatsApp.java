@@ -14,28 +14,34 @@ public class RpAccountStatsApp extends AbstractApp
 	{
 		try
 		{
-			if( args.length >= 8 )
+			if( args.length >= 9 )
 			{
 				File					inBaseFolder		= new File( args[0] );
 				File					inSvrFolder			= new File( inBaseFolder  , args[2] );
 				File					thisFolder			= new File( inSvrFolder   , args[3] );
 				File					prevFolder			= new File( inSvrFolder   , args[4] );
-				File					inThisFolder		= new File( thisFolder    , args[5] );
-				File					inPrevFolder		= new File( prevFolder    , args[5] );
+				File					inThisFolder		= new File( thisFolder    , args[6] );
+				File					inPrevFolder		= new File( prevFolder    , args[6] );
 				File					outBaseFolder		= new File( args[1] );
 				File					outSvrFolder		= new File( outBaseFolder , args[2] );
 				File					outThisFolder		= new File( outSvrFolder  , args[3] );
-//				File					outFile				= new File( outThisFolder , args[7] );
-				File					outFile				= new File( outBaseFolder , args[2] + args[3] + args[7] );
+				File					outFile				= new File( outThisFolder , args[8] );
+//				File					outFile				= new File( outBaseFolder , args[2] + args[3] + args[8] );
+				File					rankFile			= new File( outBaseFolder , args[5] );
 				String					repLabel			= args[2] + "\t" + args[3];
-				String					since				= args[6];
+				String					since				= args[7];
+				boolean					isOutWR				= false;
+				if( args.length >= 10 )
+				{
+					isOutWR									= Boolean.parseBoolean( args[9] );
+				}
 				File					logFile				= new File( outBaseFolder , "error.log" );
 				RpAccountStatsApp		instance			= new RpAccountStatsApp( logFile );
-				instance.execute( inThisFolder , inPrevFolder , outFile , repLabel , since );
+				instance.execute( inThisFolder , inPrevFolder , rankFile , outFile , repLabel , since , isOutWR );
 			}
 			else
 			{
-				System.out.println( "usage : java RpAccountStatsApp [in base folder] [out base folder] [server] [date this] [date prev] [in folder] [since] [out file]" );
+				System.out.println( "usage : java RpAccountStatsApp [in base folder] [out base folder] [server] [date this] [date prev] [rank file] [in folder] [since] [out file] (is out WR)" );
 			}
 		}
 		catch( Exception ex )
@@ -48,22 +54,25 @@ public class RpAccountStatsApp extends AbstractApp
 	{
 		super( logFile );
 	}
-	public void execute( File inThisFolder , File inPrevFolder , File outFile , String repLabel , String since ) throws Exception
+	public void execute( File inThisFolder , File inPrevFolder , File rankFile , File outFile , String repLabel , String since , boolean isOutWR ) throws Exception
 	{
+		Set<Long>						battleRanks			= loadBattleRanks( rankFile );
 		outFile.getParentFile().mkdirs();
-		Map<Long,Long>					reportMap			= new TreeMap<Long,Long>();
+		Map<String,Report>				reportMap			= new TreeMap<String,Report>();
 		File[]							inThisFiles			= inThisFolder.listFiles( new XFileFilter.Text() );
 		int								ix					= 0;
 		for( File inThisFile : inThisFiles )
 		{
 			outLog( String.format( "%6d/%6d" , ix , inThisFiles.length ) + ":" + inThisFile.getName() );
 			File						inPrevFile			= new File( inPrevFolder , inThisFile.getName() );
-			processSubtract( inThisFile , inPrevFile , reportMap , since );
+			processSubtract( inThisFile , inPrevFile , battleRanks , reportMap , since , isOutWR );
 			ix++;
 		}
+		battleRanks.clear();
 		outReport( outFile , reportMap , repLabel );
+		reportMap.clear();
 	}
-	protected void processSubtract( File inThisFile , File inPrevFile , Map<Long,Long> reportMap , String since ) throws IOException
+	protected void processSubtract( File inThisFile , File inPrevFile , Set<Long> battleRanks , Map<String,Report> reportMap , String since , boolean isOutWR ) throws IOException
 	{
 		List<AccountBattleInfo>			thisModels			= Models.loadModels( inThisFile , new AccountBattleInfo() , WowsModelBase.cs );
 		List<AccountBattleInfo>			prevModels			= Models.loadModels( inPrevFile , new AccountBattleInfo() , WowsModelBase.cs );
@@ -72,27 +81,42 @@ public class RpAccountStatsApp extends AbstractApp
 		for( AccountBattleInfo thisModel : thisModels )
 		{
 			AccountBattleInfo			prevModel			= prevMap.get( Long.valueOf( thisModel.accountId )) ;
-			Long						accountCategory		= getAccountCategory( thisModel , prevModel , since );
-			Long						catCnt				= reportMap.get( accountCategory );
-			if( catCnt == null )
+			long						battleCategory		= getBattleCategory( thisModel , prevModel , battleRanks , since );
+			if( battleCategory <= 0 )
 			{
-				catCnt										= Long.valueOf( 1 );
+				thisModel.clean();
 			}
-			else
+			String						accountCategory		= getAccountCategory( thisModel , battleCategory , isOutWR );
+			Report						report				= reportMap.get( accountCategory );
+			if( report == null )
 			{
-				catCnt										= Long.valueOf( catCnt.longValue() + 1 );
+				report										= new Report();
 			}
-			reportMap.put( accountCategory , catCnt );
+			report.add( thisModel );
+			reportMap.put( accountCategory , report );
 		}
 		thisModels.clear();
 		prevMap.clear();
 	}
-	protected Long getAccountCategory( AccountBattleInfo thisInfo , AccountBattleInfo prevInfo , String since )
+	protected String getAccountCategory( AccountBattleInfo info , long battleCategory , boolean isOutWR )
 	{
-		long							res					= 0;
+		int								wrValue				= -1;
+		if( isOutWR )
+		{
+			if( battleCategory > 0 )
+			{
+				BigDecimal				wins100				= info.pvpWins.multiply( BigDecimal.TEN , WowsModelBase.mcDown ).multiply( BigDecimal.TEN , WowsModelBase.mcDown );
+				wrValue										= wins100.divide( info.pvpBattles , 0 , RoundingMode.DOWN ).intValue();
+			}
+		}
+		return	String.format( "%06d\t%03d" , battleCategory , wrValue );
+	}
+	protected long getBattleCategory( AccountBattleInfo thisInfo , AccountBattleInfo prevInfo , Set<Long> battleRanks , String since )
+	{
+		long							battleCategory		= 0;
 		if( thisInfo.hiddenProfile )
 		{
-			res												= -99;
+			battleCategory									= -99;
 		}
 		else
 		{
@@ -100,29 +124,29 @@ public class RpAccountStatsApp extends AbstractApp
 			{
 				if( prevInfo.hiddenProfile )
 				{
-					res										= -99;
+					battleCategory							= -99;
 				}
 				else
 				{
 					thisInfo.subtract( prevInfo );
-					res										= getAccountCategorySub( thisInfo );
+					battleCategory							= getBattleCategorySub( thisInfo , battleRanks );
 				}
 			}
 			else
 			{
 				if( thisInfo.createdAt.compareTo( since ) < 0 )
 				{
-					res										= -10;
+					battleCategory							= -10;
 				}
 				else
 				{
-					res										= getAccountCategorySub( thisInfo );
+					battleCategory							= getBattleCategorySub( thisInfo , battleRanks );
 				}
 			}
 		}
-		return	Long.valueOf( res );
+		return	battleCategory;
 	}
-	protected long getAccountCategorySub( AccountBattleInfo info )
+	protected long getBattleCategorySub( AccountBattleInfo info , Set<Long> battleRanks )
 	{
 		long							res					= 0;
 		long							pvpBattle			= info.pvpBattles.longValue();
@@ -141,58 +165,80 @@ public class RpAccountStatsApp extends AbstractApp
 		else
 		{
 			res												= 1;
-			if( pvpBattle >= 10 )
+			for( Long battleRank : battleRanks )
 			{
-				res											= 10;
-			}
-			if( pvpBattle >= 100 )
-			{
-				res											= 100;
-			}
-			if( pvpBattle >= 200 )
-			{
-				res											= 200;
-			}
-			if( pvpBattle >= 500 )
-			{
-				res											= 500;
-			}
-			if( pvpBattle >= 1000 )
-			{
-				res											= 1000;
-			}
-			if( pvpBattle >= 2000 )
-			{
-				res											= 2000;
-			}
-			if( pvpBattle >= 3000 )
-			{
-				res											= 3000;
-			}
-			if( pvpBattle >= 5000 )
-			{
-				res											= 5000;
-			}
-			if( pvpBattle >= 10000 )
-			{
-				res											= 10000;
+				if( pvpBattle >= battleRank.longValue() )
+				{
+					res										= battleRank.longValue();
+				}
 			}
 		}
 		return	res;
 	}
-	protected String getReportLine( Long key , Long value )
-	{
-		return	String.format( "%d\t%d" , key.longValue() , value.longValue() );
-	}
-	protected void outReport( File outFile , Map<Long,Long> reportMap , String repLabel ) throws IOException
+	protected void outReport( File outFile , Map<String,Report> reportMap , String repLabel ) throws IOException
 	{
 		List<String>					lines				= new ArrayList<String>();
-		for( Map.Entry<Long,Long> entry : reportMap.entrySet() )
+		for( Map.Entry<String,Report> entry : reportMap.entrySet() )
 		{
-			String						line				= repLabel + "\t" + getReportLine( entry.getKey() , entry.getValue() );
-			lines.add( line );
+			Report						report				= entry.getValue();
+			StringBuffer				buffer				= new StringBuffer();
+			buffer.append( repLabel );
+			buffer.append( WowsModelBase.DELIMITER );
+			buffer.append( entry.getKey() );
+			WowsModelBase.appendString( buffer , report.players				, true );
+			WowsModelBase.appendString( buffer , report.battles				, true );
+			WowsModelBase.appendString( buffer , report.wins				, true );
+			WowsModelBase.appendString( buffer , report.draws				, true );
+			WowsModelBase.appendString( buffer , report.losses				, true );
+			WowsModelBase.appendString( buffer , report.wrs					, true );
+			lines.add( buffer.toString() );
 		}
 		FileIO.storeLines( outFile , lines );
 		lines.clear();
+	}
+	protected Set<Long> loadBattleRanks( File file ) throws IOException
+	{
+		Set<Long>						battleRanks			= new TreeSet<Long>();
+		List<String>					lines				= FileIO.loadLines( file , WowsModelBase.cs );
+		for( String line : lines )
+		{
+			battleRanks.add( Long.valueOf( line ) );
+		}
+		lines.clear();
+		return	battleRanks;
+	}
+	static class Report
+	{
+		public BigDecimal				players;
+		public BigDecimal				battles;
+		public BigDecimal				wins;
+		public BigDecimal				draws;
+		public BigDecimal				losses;
+		public BigDecimal				wrs;
+		public Report()
+		{
+			clean();
+		}
+		public void clean()
+		{
+			players											= BigDecimal.ZERO;
+			battles											= BigDecimal.ZERO;
+			wins											= BigDecimal.ZERO;
+			draws											= BigDecimal.ZERO;
+			losses											= BigDecimal.ZERO;
+			wrs												= BigDecimal.ZERO;
+		}
+		public void add( AccountBattleInfo info )
+		{
+			players											= players	.add( BigDecimal.ONE );
+			if( info.pvpBattles.longValue() > 0 )
+			{
+				battles										= battles	.add( info.pvpBattles , WowsModelBase.mcDown );
+				wins										= wins		.add( info.pvpWins , WowsModelBase.mcDown );
+				draws										= draws		.add( info.pvpDraws , WowsModelBase.mcDown );
+				losses										= losses	.add( info.pvpLosses , WowsModelBase.mcDown );
+				wrs											= wrs		.add( info.pvpWins.divide( info.pvpBattles , 20 , RoundingMode.DOWN ) , WowsModelBase.mcDown );
+			}
+		}
 	}
 }

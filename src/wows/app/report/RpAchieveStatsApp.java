@@ -26,7 +26,7 @@ public class RpAchieveStatsApp extends AbstractApp
 				File					outFile				= new File( outThisFolder , args[5] );
 				File					logFile				= new File( outBaseFolder , "error.log" );
 				RpAchieveStatsApp		instance			= new RpAchieveStatsApp( logFile );
-				instance.execute( inThisFolder , outFile , outFile );
+				instance.execute( inThisFolder , outFile );
 			}
 			else
 			{
@@ -43,7 +43,7 @@ public class RpAchieveStatsApp extends AbstractApp
 	{
 		super( logFile );
 	}
-	public void execute( File inThisFolder , File outFile , File outFile ) throws Exception
+	public void execute( File inThisFolder , File outFile ) throws Exception
 	{
 		outFile.getParentFile().mkdirs();
 		Map<String,Long>				frequencyMap		= new TreeMap<String,Long>();

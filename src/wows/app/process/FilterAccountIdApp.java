@@ -30,13 +30,18 @@ public class FilterAccountIdApp extends AbstractApp
 				{
 					since									= args[7];
 				}
+				boolean					isOutName			= false;
+				if( args.length >= 9 )
+				{
+					isOutName								= Boolean.valueOf( args[8] );
+				}
 				File					logFile				= new File( outThisFolder  , "error.log" );
 				FilterAccountIdApp		instance			= new FilterAccountIdApp( logFile );
-				instance.execute( inFolder , outFile , type , since );
+				instance.execute( inFolder , outFile , type , since , isOutName );
 			}
 			else
 			{
-				System.out.println( "usage : java FilterAccountIdApp [in base folder] [out base folder] [server] [date this] [in folder] [out file] [type] (since)" );
+				System.out.println( "usage : java FilterAccountIdApp [in base folder] [out base folder] [server] [date this] [in folder] [out file] [type] (since) (isOutName)" );
 			}
 		}
 		catch( Exception ex )
@@ -49,7 +54,7 @@ public class FilterAccountIdApp extends AbstractApp
 	{
 		super( logFile );
 	}
-	public void execute( File inFolder , File outFile , String type , String since ) throws Exception
+	public void execute( File inFolder , File outFile , String type , String since , boolean isOutName ) throws Exception
 	{
 		Set<String>						ids					= new TreeSet<String>();
 		File[]							inFiles				= inFolder.listFiles( new XFileFilter.Text() );
@@ -79,7 +84,16 @@ public class FilterAccountIdApp extends AbstractApp
 				}
 				if( isOut )
 				{
-					ids.add( String.valueOf( accountInfo.accountId ) );
+					String				outText				= "";
+					if( isOutName )
+					{
+						outText								= String.valueOf( accountInfo.accountId ) + "\t" + accountInfo.accountName ;
+					}
+					else
+					{
+						outText								= String.valueOf( accountInfo.accountId );
+					}
+					ids.add( outText );
 				}
 			}
 			models.clear();

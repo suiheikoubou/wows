@@ -466,7 +466,9 @@
 4178556880	Eagle	AirCarrier	uk	11	false	true	48000000	0	PBSA111																														0
 4178556912	United States	AirCarrier	usa	11	false	true	48000000	0	PASA111																														0
 4179015120	K-1	Submarine	ussr	10	false	true	28000000	0	PRSS110																														0
+4179015472	U-2501 (old)	Submarine	germany	10	false	true	28000000	0	PGSS210																														0
 4179015632	Thrasher	Submarine	uk	10	false	true	28000000	0	PBSS110																														0
+4179015664	Balao (old)	Submarine	usa	10	false	true	28000000	0	PASS210																														0
 4179506384	Yueyang	Destroyer	pan_asia	10	false	true	19500000	0	PZSD110																														0
 4179506480	Halland	Destroyer	europe	10	false	true	20000000	0	PWSD110																														0
 4179506640	Khabarovsk	Destroyer	ussr	10	false	true	0	34650	PRSD110																														0
@@ -518,7 +520,9 @@
 4180621264	Lion	Battleship	uk	9	false	true	15900000	0	PBSB109																														0
 4180621296	Minnesota	Battleship	usa	9	false	true	15500000	0	PASB109																														0
 4181112272	L-20	Submarine	ussr	8	false	true	11500000	0	PRSS108																														0
+4181112624	U-190 (old)	Submarine	germany	8	false	true	11500000	0	PGSS208																														0
 4181112784	Sturdy	Submarine	uk	8	false	true	11500000	0	PBSS108																														0
+4181112816	Salmon (old)	Submarine	usa	8	false	true	11500000	0	PASS208																														0
 4181603536	Hsienyang	Destroyer	pan_asia	8	false	true	8800000	0	PZSD108																														0
 4181603632	Öland	Destroyer	europe	8	false	true	8800000	0	PWSD108																														0
 4181603792	Tashkent (old)	Destroyer	ussr	8	false	false	0	0	X																														0
@@ -572,7 +576,9 @@
 4182718288	Lyon	Battleship	france	7	false	true	6000000	0	PFSB107																														0
 4182718416	King George V	Battleship	uk	7	false	true	6700000	0	PBSB107																														0
 4183209424	S-1	Submarine	ussr	6	false	true	4500000	0	PRSS106																														0
+4183209776	U-69 (old)	Submarine	germany	6	false	true	4500000	0	PGSS206																														0
 4183209936	Undine	Submarine	uk	6	false	true	4500000	0	PBSS106																														0
+4183209968	Cachalot (old)	Submarine	usa	6	false	true	4500000	0	PASS206																														0
 4183700688	Fushun	Destroyer	pan_asia	6	false	true	2990000	0	PZSD106																														0
 4183700784	Västerås	Destroyer	europe	6	false	true	3000000	0	PWSD106																														0
 4183700944	Ognevoi (old)	Destroyer	ussr	6	false	false	0	0	X																														0
@@ -734,16 +740,56 @@
 4282333168	North Carolina	Battleship	usa	8	false	true	9800000	0	PASB012																														0
 4282365648	Shokaku (old)	AirCarrier	japan	8	false	false	10080000	0	PJSA012																														0
 4282365936	Lexington (old)	AirCarrier	usa	8	false	false	9600000	0	PASA012																														0
+4283381456	Mikasa	Battleship	japan	2	true	true	0	2000	PJSB011																														0
 4283414224	Hiryu (old)	AirCarrier	japan	7	false	false	6000000	0	PJSA011																														0
 4284364496	Kagero (old)	Destroyer	japan	9	false	false	0	0	X																														0
+4284397008	Diana Lima	Cruiser	ussr	2	true	true	0	1650	PRSC010																														0
+4284430032	Nagato	Battleship	japan	7	false	true	6350000	0	PJSB010																														0
 4284463088	Ranger (old)	AirCarrier	usa	7	false	false	6000000	0	PASA010																														0
+4285445840	Mogami	Cruiser	japan	8	false	true	8800000	0	PJSC009																														0
 4285511376	Ryujo (old)	AirCarrier	japan	6	false	false	3470000	0	PJSA009																														0
+4286461936	Benson	Destroyer	usa	8	false	true	9040000	0	PASD008																														0
+4286494416	Myōkō	Cruiser	japan	7	false	true	5800000	0	PJSC008																														0
+4286527184	Ishizuchi	Battleship	japan	4	true	true	0	2500	PJSB008																														0
+4286527472	Colorado	Battleship	usa	7	false	true	6000000	0	PASB008																														0
 4287510224	Fubuki (old)	Destroyer	japan	8	false	false	0	0	X																														0
+4287542992	Aoba	Cruiser	japan	6	false	true	2660000	0	PJSC007																														0
 4287543280	Cleveland (old)	Cruiser	usa	6	false	false	2950000	0	PASC007																														0
+4287575760	Kongō	Battleship	japan	5	false	true	1420000	0	PJSB007																														0
 4288558800	Hatsuharu (old)	Destroyer	japan	7	false	false	0	0	X																														0
+4288559088	Mahan	Destroyer	usa	7	false	true	5350000	0	PASD006																														0
+4288591856	Atlanta	Cruiser	usa	7	true	true	0	9000	PASC006																														0
+4288624336	Fusō	Battleship	japan	6	false	true	3490000	0	PJSB006																														0
+4288624624	New York	Battleship	usa	5	false	true	1500000	0	PASB006																														0
 4288657104	Zuiho (old)	AirCarrier	japan	5	false	false	1660000	0	PJSA006																														0
 4288657392	Independence (old)	AirCarrier	usa	6	false	false	3280000	0	PASA006																														0
 4289607376	Mutsuki (old)	Destroyer	japan	6	false	false	0	0	X																														0
+4289607664	Farragut	Destroyer	usa	6	false	true	3120000	0	PASD005																														0
+4289640144	Furutaka	Cruiser	japan	5	false	true	1370000	0	PJSC005																														0
+4289640432	Omaha	Cruiser	usa	5	false	true	1200000	0	PASC005																														0
+4290655952	Minekaze	Destroyer	japan	5	false	true	1380000	0	PJSD004																														0
+4290688720	Yūbari	Cruiser	japan	4	true	true	0	2250	PJSC004																														0
+4290689008	St. Louis	Cruiser	usa	3	false	true	247000	0	PASC004																														0
+4290721776	Wyoming	Battleship	usa	4	false	true	785000	0	PASB004																														0
 4290754544	Langley (old)	AirCarrier	usa	4	false	false	820000	0	PASA004																														0
+4291704528	Isokaze	Destroyer	japan	4	false	true	705000	0	PJSD003																														0
+4291737040	Murmansk	Cruiser	ussr	5	true	true	0	3000	PRSC003																														0
+4291737584	Albany	Cruiser	usa	2	true	true	0	1550	PASC003																														0
+4291770064	Myōgi	Battleship	japan	4	false	true	775000	0	PJSB003																														0
+4292753104	Umikaze	Destroyer	japan	2	false	true	60000	0	PJSD002																														0
+4292753392	Sampson	Destroyer	usa	2	false	true	60000	0	PASD002																														0
+4292785616	Diana	Cruiser	ussr	2	true	true	0	1650	PRSC002																														0
+4292785968	Dresden	Cruiser	germany	2	false	true	67300	0	PGSC002																														0
+4292786160	Chester	Cruiser	usa	2	false	true	69300	0	PASC002																														0
+4292818736	Tirpitz	Battleship	germany	8	true	true	0	12500	PGSB002																														0
+4292818896	Warspite	Battleship	uk	6	true	true	0	6500	PBSB002																														0
 4292851408	Hosho (old)	AirCarrier	japan	4	false	false	810000	0	PJSA002																														0
 4292851696	Bogue (old)	AirCarrier	usa	5	false	false	1650000	0	PASA002																														0
+4293801424	Gremyashchy	Destroyer	ussr	5	true	true	0	2350	PRSD001																														0
+4293801680	Tachibana	Destroyer	japan	2	true	true	0	950	PJSD001																														0
+4293834192	Aurora	Cruiser	ussr	3	true	true	0	2250	PRSC001																														0
+4293834544	Hermelin	Cruiser	germany	1	false	true	0	0	PGSC001																														0
+4293834736	Erie	Cruiser	usa	1	false	true	0	0	PASC001																														0
+4293866960	Imperator Nikolai I	Battleship	ussr	4	true	true	0	2800	PRSB001																														0
+4293867216	Kawachi	Battleship	japan	3	false	true	318000	0	PJSB001																														0
+4293867504	South Carolina	Battleship	usa	3	false	true	309000	0	PASB001																														0

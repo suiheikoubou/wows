@@ -9,6 +9,12 @@ public class ShipInfo implements Comparable<ShipInfo>,Mappable<Long>,Model<ShipI
 	public static final int				ST_NONE				= 0;
 	public static final int				CMDS_LEN			= 10;
 
+	public static final String			TYPE_BB				= "Battleship";
+	public static final String			TYPE_CA				= "Cruiser";
+	public static final String			TYPE_DD				= "Destroyer";
+	public static final String			TYPE_CV				= "AirCarrier";
+	public static final String			TYPE_SS				= "Submarine";
+
 	public long							shipId;
 	public String						shipName;
 	public String						shipType;
@@ -143,5 +149,25 @@ public class ShipInfo implements Comparable<ShipInfo>,Mappable<Long>,Model<ShipI
 			res												= true;
 		}
 		return	res;
+	}
+	public boolean isTypeBB()
+	{
+		return	shipType.equals( TYPE_BB );
+	}
+	public boolean isTypeCA()
+	{
+		return	shipType.equals( TYPE_CA );
+	}
+	public boolean isTypeDD()
+	{
+		return	shipType.equals( TYPE_DD );
+	}
+	public boolean isTypeCV()
+	{
+		return	shipType.equals( TYPE_CV );
+	}
+	public boolean isTypeSS()
+	{
+		return	shipType.equals( TYPE_SS );
 	}
 }

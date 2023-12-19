@@ -8,6 +8,7 @@ import com.suiheikoubou.common.model.*;
 public class ShipBattleInfo implements Comparable<ShipBattleInfo>,Mappable<ShipBattleInfoKey>,Model<ShipBattleInfo>
 {
 	public static final int				ST_NONE				= 0;
+	public static final int				ST_STATS			= 10;
 
 	public ShipBattleInfoKey			key;
 	public BigDecimal					valueBattles;
@@ -32,6 +33,12 @@ public class ShipBattleInfo implements Comparable<ShipBattleInfo>,Mappable<ShipB
 	public BigDecimal					valueMainHits;
 	public BigDecimal					valueDistance;
 
+	public String						shipName;
+	public String						shipType;
+	public String						nation;
+	public int							tier;
+	public BigDecimal					players;
+
 	public ShipBattleInfo()
 	{
 		this( new ShipBattleInfoKey() );
@@ -43,8 +50,8 @@ public class ShipBattleInfo implements Comparable<ShipBattleInfo>,Mappable<ShipB
 	}
 	public void clean()
 	{
-		key.accountId										= 0L;
-		key.shipId											= 0L;
+//		key.accountId										= 0L;
+//		key.shipId											= 0L;
 		valueBattles										= BigDecimal.ZERO;
 		valueWins											= BigDecimal.ZERO;
 		valueDraws											= BigDecimal.ZERO;
@@ -66,6 +73,12 @@ public class ShipBattleInfo implements Comparable<ShipBattleInfo>,Mappable<ShipB
 		valueMainShots										= BigDecimal.ZERO;
 		valueMainHits										= BigDecimal.ZERO;
 		valueDistance										= BigDecimal.ZERO;
+
+		shipName											= "";
+		shipType											= "";
+		nation												= "";
+		tier												= 0;
+		players												= BigDecimal.ZERO;
 	}
 
 	public int compareTo( ShipBattleInfo perm )
@@ -163,6 +176,37 @@ public class ShipBattleInfo implements Comparable<ShipBattleInfo>,Mappable<ShipB
 			WowsModelBase.appendString( buffer , valueDistance				, true );
 			cmds_cnt										= 23;
 			break;
+		case	ST_STATS	:
+			WowsModelBase.appendString( buffer , key.accountId				, false );
+			WowsModelBase.appendString( buffer , key.shipId					, true );
+			WowsModelBase.appendString( buffer , valueBattles				, true );
+			WowsModelBase.appendString( buffer , valueWins					, true );
+			WowsModelBase.appendString( buffer , valueDraws					, true );
+			WowsModelBase.appendString( buffer , valueLosses				, true );
+			WowsModelBase.appendString( buffer , valueSurvivedBattles		, true );
+			WowsModelBase.appendString( buffer , valueDamageDealt			, true );
+			WowsModelBase.appendString( buffer , valueFrags					, true );
+			WowsModelBase.appendString( buffer , valuePlanesKilled			, true );
+			WowsModelBase.appendString( buffer , valueCapturePoints			, true );
+			WowsModelBase.appendString( buffer , valueDroppedCapturePoints	, true );
+			WowsModelBase.appendString( buffer , valueXp					, true );
+			WowsModelBase.appendString( buffer , valueArtAgro				, true );
+			WowsModelBase.appendString( buffer , valueTorpedoAgro			, true );
+			WowsModelBase.appendString( buffer , valueDamageScouting		, true );
+			WowsModelBase.appendString( buffer , valueShipsSpotted			, true );
+			WowsModelBase.appendString( buffer , valueTeamCapturePoints		, true );
+			WowsModelBase.appendString( buffer , valueTeamDroppedPoints		, true );
+			WowsModelBase.appendString( buffer , valueBattlesSince512		, true );
+			WowsModelBase.appendString( buffer , valueMainShots				, true );
+			WowsModelBase.appendString( buffer , valueMainHits				, true );
+			WowsModelBase.appendString( buffer , valueDistance				, true );
+			WowsModelBase.appendString( buffer , shipName					, true );
+			WowsModelBase.appendString( buffer , shipType					, true );
+			WowsModelBase.appendString( buffer , nation						, true );
+			WowsModelBase.appendString( buffer , tier						, true );
+			WowsModelBase.appendString( buffer , players					, true );
+			cmds_cnt										= 28;
+			break;
 		}
 		for( int ix = cmds_cnt ; ix < WowsModelBase.CMDS_LEN ; ix++ )
 		{
@@ -236,6 +280,7 @@ public class ShipBattleInfo implements Comparable<ShipBattleInfo>,Mappable<ShipB
 		valueMainShots										=	valueMainShots				.add(		perm.	valueMainShots				, WowsModelBase.mcDown );
 		valueMainHits										=	valueMainHits				.add(		perm.	valueMainHits				, WowsModelBase.mcDown );
 		valueDistance										=	valueDistance				.add(		perm.	valueDistance				, WowsModelBase.mcDown );
+		players												=	players						.add(		perm.	players						, WowsModelBase.mcDown );
 	}
 	public void subtract( ShipBattleInfo perm )
 	{
@@ -260,5 +305,13 @@ public class ShipBattleInfo implements Comparable<ShipBattleInfo>,Mappable<ShipB
 		valueMainShots										=	valueMainShots				.subtract(	perm.	valueMainShots				, WowsModelBase.mcDown );
 		valueMainHits										=	valueMainHits				.subtract(	perm.	valueMainHits				, WowsModelBase.mcDown );
 		valueDistance										=	valueDistance				.subtract(	perm.	valueDistance				, WowsModelBase.mcDown );
+		players												=	players						.subtract(	perm.	players						, WowsModelBase.mcDown );
+	}
+	public void setShipInfo( ShipInfo info )
+	{
+		shipName											= info.shipName;
+		shipType											= info.shipType;
+		nation												= info.nation;
+		tier												= info.tier;
 	}
 }

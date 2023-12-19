@@ -8,6 +8,7 @@ import com.suiheikoubou.common.model.*;
 public class AccountBattleInfo implements Comparable<AccountBattleInfo>,Mappable<Long>,Model<AccountBattleInfo>
 {
 	public static final int				ST_NONE				= 0;
+	public static final int				ST_ADDNOTE			= 10;
 
 	public long							accountId;
 	public String						accountName;
@@ -38,6 +39,10 @@ public class AccountBattleInfo implements Comparable<AccountBattleInfo>,Mappable
 	public BigDecimal					operdWins;
 	public BigDecimal					operhBattles;
 	public BigDecimal					operhWins;
+
+	public String						clanTag;
+	public String						mostPlayed;
+	public BigDecimal					tierAvg;
 
 	public AccountBattleInfo()
 	{
@@ -74,6 +79,10 @@ public class AccountBattleInfo implements Comparable<AccountBattleInfo>,Mappable
 		operdWins											= BigDecimal.ZERO;
 		operhBattles										= BigDecimal.ZERO;
 		operhWins											= BigDecimal.ZERO;
+
+		clanTag												= "";
+		mostPlayed											= "";
+		tierAvg												= BigDecimal.ZERO;
 	}
 	public int compareTo( AccountBattleInfo perm )
 	{
@@ -197,6 +206,48 @@ public class AccountBattleInfo implements Comparable<AccountBattleInfo>,Mappable
 			WowsModelBase.appendString( buffer , operhWins				, true );
 			cmds_cnt										= 28;
 			break;
+		case	ST_ADDNOTE	:
+			WowsModelBase.appendString( buffer , accountId				, false );
+			WowsModelBase.appendString( buffer , accountName			, true );
+			WowsModelBase.appendString( buffer , levelingTier			, true );
+			WowsModelBase.appendString( buffer , createdAt				, true );
+			WowsModelBase.appendString( buffer , lastBattleTime			, true );
+			if( hiddenProfile )
+			{
+				WowsModelBase.appendString( buffer , "hidden"			, true );
+			}
+			else
+			{
+				WowsModelBase.appendString( buffer , "normal"			, true );
+			}
+			WowsModelBase.appendString( buffer , pvpBattles				, true );
+			WowsModelBase.appendString( buffer , pvpWins				, true );
+			WowsModelBase.appendString( buffer , pvpDraws				, true );
+			WowsModelBase.appendString( buffer , pvpLosses				, true );
+			WowsModelBase.appendString( buffer , pveBattles				, true );
+			WowsModelBase.appendString( buffer , pveWins				, true );
+			WowsModelBase.appendString( buffer , rankBattles			, true );
+			WowsModelBase.appendString( buffer , rankWins				, true );
+			WowsModelBase.appendString( buffer , clubBattles			, true );
+			WowsModelBase.appendString( buffer , clubWins				, true );
+			WowsModelBase.appendString( buffer , pvp1Battles			, true );
+			WowsModelBase.appendString( buffer , pvp1Wins				, true );
+			WowsModelBase.appendString( buffer , pvp2Battles			, true );
+			WowsModelBase.appendString( buffer , pvp2Wins				, true );
+			WowsModelBase.appendString( buffer , pvp3Battles			, true );
+			WowsModelBase.appendString( buffer , pvp3Wins				, true );
+			WowsModelBase.appendString( buffer , oper1Battles			, true );
+			WowsModelBase.appendString( buffer , oper1Wins				, true );
+			WowsModelBase.appendString( buffer , operdBattles			, true );
+			WowsModelBase.appendString( buffer , operdWins				, true );
+			WowsModelBase.appendString( buffer , operhBattles			, true );
+			WowsModelBase.appendString( buffer , operhWins				, true );
+
+			WowsModelBase.appendString( buffer , clanTag				, true );
+			WowsModelBase.appendString( buffer , mostPlayed				, true );
+			WowsModelBase.appendString( buffer , tierAvg				, true );
+			cmds_cnt										= 31;
+			break;
 		}
 
 		for( int ix = cmds_cnt ; ix < WowsModelBase.CMDS_LEN ; ix++ )
@@ -278,5 +329,17 @@ public class AccountBattleInfo implements Comparable<AccountBattleInfo>,Mappable
 	public BigDecimal getTotalBattles()
 	{
 		return	pvpBattles.add( pveBattles ).add( rankBattles ).add( clubBattles ).add( oper1Battles ).add( operdBattles ).add( operhBattles ) ;
+	}
+	public void addNote( AccountClanInfo clanInfo , AccountSummaryInfo summaryInfo )
+	{
+		if( clanInfo != null )
+		{
+			clanTag											= clanInfo.clanTag;
+		}
+		if( summaryInfo != null )
+		{
+			mostPlayed										= summaryInfo.getMostPlayed();
+			tierAvg											= summaryInfo.getTierAvg();
+		}
 	}
 }

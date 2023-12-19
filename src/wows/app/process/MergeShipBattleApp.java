@@ -21,18 +21,18 @@ public class MergeShipBattleApp extends AbstractApp
 				File					thisFolder			= new File( baseSvrFolder , args[3] );
 				File					prevFolder			= new File( baseSvrFolder , args[4] );
 				File					thisOutFolder		= new File( thisFolder    , args[5] );
-				File					prevOutFolder		= new File( prevFolder    , args[5] );
+				File					prevInFolder		= new File( prevFolder    , args[5] );
 				File					tmpBaseFolder		= new File( args[1] );
 				File					tmpSvrFolder		= new File( tmpBaseFolder , args[2] );
 				File					tmpThisFolder		= new File( tmpSvrFolder  , args[3] );
 				File					tmpInFolder			= new File( tmpThisFolder , args[6] );
 				File					logFile				= new File( thisFolder    , "error.log" );
 				MergeShipBattleApp		instance			= new MergeShipBattleApp( logFile );
-				instance.execute( thisOutFolder , prevOutFolder , tmpInFolder );
+				instance.execute( thisOutFolder , prevInFolder , tmpInFolder );
 			}
 			else
 			{
-				System.out.println( "usage : java MergeShipBattleApp [base folder] [tmp base folder] [server] [date this] [date prev] [out folder] [tmp in folder]" );
+				System.out.println( "usage : java MergeShipBattleApp [base folder] [tmp base folder] [server] [date this] [date prev] [in/out folder] [tmp in folder]" );
 			}
 		}
 		catch( Exception ex )
@@ -45,10 +45,10 @@ public class MergeShipBattleApp extends AbstractApp
 	{
 		super( logFile );
 	}
-	public void execute( File thisOutFolder , File prevOutFolder , File tmpInFolder ) throws Exception
+	public void execute( File thisOutFolder , File prevInFolder , File tmpInFolder ) throws Exception
 	{
 		thisOutFolder.mkdirs();
-		File[]							prevFiles			= prevOutFolder.listFiles( new XFileFilter.Text() );
+		File[]							prevFiles			= prevInFolder.listFiles( new XFileFilter.Text() );
 		int								ix					= 0;
 		for( File prevFile : prevFiles )
 		{
@@ -65,7 +65,7 @@ public class MergeShipBattleApp extends AbstractApp
 	}
 	protected void 	processMerge( Map<ShipBattleInfoKey,ShipBattleInfo> modelMap, File inFile ) throws IOException
 	{
-		if( inFile.exists() )
+//		if( inFile.exists() )
 		{
 			List<ShipBattleInfo>		inModels			= Models.loadModels( inFile , new ShipBattleInfo() , WowsModelBase.cs );
 			for( ShipBattleInfo model : inModels )

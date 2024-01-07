@@ -170,4 +170,56 @@ public class ShipInfo implements Comparable<ShipInfo>,Mappable<Long>,Model<ShipI
 	{
 		return	shipType.equals( TYPE_SS );
 	}
+	public long getShipTypeNum()
+	{
+		long							shipTypeNum			= 0;
+		if( isTypeBB() )
+		{
+			shipTypeNum										= 100000 + tier*100;
+		}
+		if( isTypeCA() )
+		{
+			shipTypeNum										= 200000 + tier*100;
+		}
+		if( isTypeDD() )
+		{
+			shipTypeNum										= 300000 + tier*100;
+		}
+		if( isTypeCV() )
+		{
+			shipTypeNum										= 400000 + tier*100;
+		}
+		if( isTypeSS() )
+		{
+			shipTypeNum										= 500000 + tier*100;
+		}
+		return	shipTypeNum;
+	}
+	public static String getShipType( long shipTypeNum )
+	{
+		String							shipType			= "";
+		switch( (int)(( shipTypeNum / 10000 ) % 100) )
+		{
+		case	10:
+			shipType										= TYPE_BB;
+			break;
+		case	20:
+			shipType										= TYPE_CA;
+			break;
+		case	30:
+			shipType										= TYPE_DD;
+			break;
+		case	40:
+			shipType										= TYPE_CV;
+			break;
+		case	50:
+			shipType										= TYPE_SS;
+			break;
+		}
+		return	shipType;
+	}
+	public static int getTier( long shipTypeNum )
+	{
+		return	(int)(( shipTypeNum / 100 ) % 100);
+	}
 }

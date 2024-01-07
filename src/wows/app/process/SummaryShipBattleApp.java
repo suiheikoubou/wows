@@ -76,11 +76,15 @@ public class SummaryShipBattleApp extends AbstractApp
 				summary.accountId							= shipBattle.key.accountId;
 			}
 			ShipInfo					ship				= shipMap.get( Long.valueOf( shipBattle.key.shipId ) );
+			if( ship == null )
+			{
+				throw	new NullPointerException( "not in ship mst : " + String.valueOf( shipBattle.key.shipId ) );
+			}
 			summary.add( shipBattle , ship );
 			summaryMap.put( Long.valueOf( summary.accountId ) , summary );
 		}
 		shipBattles.clear();
-
+		
 		Models.storeModels( outFile , false , summaryMap.values() , AccountSummaryInfo.ST_NONE , WowsModelBase.cs );
 		summaryMap.clear();
 	}

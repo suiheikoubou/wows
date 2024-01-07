@@ -35,13 +35,20 @@ public class RpShipStatsApp extends AbstractApp
 				{
 					isWrRank								= Boolean.parseBoolean( args[10] );
 				}
+				boolean					isOutInactive		= false;
+				if( args.length >= 12 )
+				{
+					isOutInactive							= Boolean.parseBoolean( args[11] );
+				}
+				String					server				= args[4];
+				String					processDate			= args[5];
 				File					logFile				= new File( outBaseFolder , "error.log" );
 				RpShipStatsApp			instance			= new RpShipStatsApp( logFile );
-				instance.execute( mstFile , acntFolder , shipFolder , outFile , isWrRank );
+				instance.execute( mstFile , acntFolder , shipFolder , outFile , isWrRank , isOutInactive , server , processDate );
 			}
 			else
 			{
-				System.out.println( "usage : java RpShipStatsApp [mst folder] [acnt base folder] [ship base folder] [out base folder] [server] [date this] [mst file] [acnt folder] [ship folder] [out file] (is WR rank)" );
+				System.out.println( "usage : java RpShipStatsApp [mst folder] [acnt base folder] [ship base folder] [out base folder] [server] [date this] [mst file] [acnt folder] [ship folder] [out file] (is WR rank) (is out inactive)" );
 			}
 		}
 		catch( Exception ex )
@@ -54,7 +61,7 @@ public class RpShipStatsApp extends AbstractApp
 	{
 		super( logFile );
 	}
-	public void execute( File mstFile , File acntFolder , File shipFolder , File outFile , boolean isWrRank ) throws Exception
+	public void execute( File mstFile , File acntFolder , File shipFolder , File outFile , boolean isWrRank , boolean isOutInactive , String server , String processDate ) throws Exception
 	{
 		List<ShipInfo>					ships				= Models.loadModels( mstFile , new ShipInfo() , WowsModelBase.cs );
 		Map<Long,ShipInfo>				shipMap				= Models.toMap( ships );
@@ -67,7 +74,7 @@ public class RpShipStatsApp extends AbstractApp
 		{
 			outLog( String.format( "%6d/%6d" , ix , acntFiles.length ) + ":" + acntFile.getName() );
 			File						shipFile			= new File( shipFolder , acntFile.getName() );
-			processShipStats( acntFile , shipFile , modelMap , shipMap , isWrRank );
+			processShipStats( acntFile , shipFile , modelMap , shipMap , isWrRank , isOutInactive , server , processDate );
 			ix++;
 		}
 		shipMap.clear();
@@ -76,7 +83,7 @@ public class RpShipStatsApp extends AbstractApp
 		Models.storeModels( outFile , false , modelMap.values() , ShipBattleInfo.ST_STATS , WowsModelBase.cs );
 		modelMap.clear();
 	}
-	protected void processShipStats( File acntFile , File shipFile , Map<ShipBattleInfoKey,ShipBattleInfo> modelMap , Map<Long,ShipInfo> shipMap , boolean isWrRank ) throws IOException
+	protected void processShipStats( File acntFile , File shipFile , Map<ShipBattleInfoKey,ShipBattleInfo> modelMap , Map<Long,ShipInfo> shipMap , boolean isWrRank , boolean isOutInactive , String server , String processDate ) throws IOException
 	{
 		List<ShipBattleInfo>			shipBattles			= Models.loadModels( shipFile , new ShipBattleInfo() , WowsModelBase.cs );
 		List<AccountBattleInfo>			accountBattles		= Models.loadModels( acntFile , new AccountBattleInfo() , WowsModelBase.cs );
@@ -88,13 +95,21 @@ public class RpShipStatsApp extends AbstractApp
 			if( isWrRank )
 			{
 				AccountBattleInfo		account				= accountMap.get( Long.valueOf( shipBattle.key.accountId ) );
-				accountRank									= getAccountRank( account );
+				if( account == null )
+				{
+					accountRank								= 50;
+				}
+				else
+				{
+					accountRank								= account.getAccountRank();
+				}
 			}
 			ShipBattleInfoKey			key					= new ShipBattleInfoKey( accountRank , shipBattle.key.shipId );
 			ShipBattleInfo				model				= modelMap.get( key );
 			if( model == null )
 			{
 				model										= new ShipBattleInfo( key );
+				model.setReportKey( server , processDate );
 				ShipInfo				ship				= shipMap.get( Long.valueOf( shipBattle.key.shipId ) );
 				if( ship != null )
 				{
@@ -103,37 +118,12 @@ public class RpShipStatsApp extends AbstractApp
 			}
 			shipBattle.players								= BigDecimal.ONE;
 			model.add( shipBattle );
-			modelMap.put( model.key , model );
+			if( ( model.active ) || ( isOutInactive ) )
+			{
+				modelMap.put( model.key , model );
+			}
 		}
 		accountMap.clear();
 		shipBattles.clear();
-	}
-	protected long getAccountRank( AccountBattleInfo account )
-	{
-		long							accountRank			= 50;
-		if( account != null )
-		if( account.pvpBattles.longValue() >= 10 )
-		{
-			BigDecimal					wins100				= account.pvpWins.multiply( BigDecimal.TEN , WowsModelBase.mcDown ).multiply( BigDecimal.TEN , WowsModelBase.mcDown );
-			long						wrValue				= wins100.divide( account.pvpBattles , 0 , RoundingMode.DOWN ).longValue();
-			accountRank										= 30;
-			if( wrValue >= 35 )
-			{
-				accountRank									= 40;
-			}
-			if( wrValue >= 45 )
-			{
-				accountRank									= 50;
-			}
-			if( wrValue >= 55 )
-			{
-				accountRank									= 60;
-			}
-			if( wrValue >= 65 )
-			{
-				accountRank									= 70;
-			}
-		}
-		return	accountRank;
 	}
 }

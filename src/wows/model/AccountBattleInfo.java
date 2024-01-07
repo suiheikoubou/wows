@@ -342,4 +342,31 @@ public class AccountBattleInfo implements Comparable<AccountBattleInfo>,Mappable
 			tierAvg											= summaryInfo.getTierAvg();
 		}
 	}
+	public long getAccountRank()
+	{
+		long							accountRank			= 50;
+		if( pvpBattles.longValue() >= 10 )
+		{
+			BigDecimal					wins100				= pvpWins.multiply( BigDecimal.TEN , WowsModelBase.mcDown ).multiply( BigDecimal.TEN , WowsModelBase.mcDown );
+			long						wrValue				= wins100.divide( pvpBattles , 0 , RoundingMode.DOWN ).longValue();
+			accountRank										= 30;
+			if( wrValue >= 35 )
+			{
+				accountRank									= 40;
+			}
+			if( wrValue >= 45 )
+			{
+				accountRank									= 50;
+			}
+			if( wrValue >= 55 )
+			{
+				accountRank									= 60;
+			}
+			if( wrValue >= 65 )
+			{
+				accountRank									= 70;
+			}
+		}
+		return	accountRank;
+	}
 }

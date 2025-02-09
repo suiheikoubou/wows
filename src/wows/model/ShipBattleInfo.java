@@ -9,6 +9,7 @@ public class ShipBattleInfo implements Comparable<ShipBattleInfo>,Mappable<ShipB
 {
 	public static final int				ST_NONE				= 0;
 	public static final int				ST_STATS			= 10;
+	public static final int				ST_ADDNOTE			= 20;
 
 	public ShipBattleInfoKey			key;
 	public BigDecimal					valueBattles;
@@ -42,6 +43,9 @@ public class ShipBattleInfo implements Comparable<ShipBattleInfo>,Mappable<ShipB
 	public int							tier;
 	public boolean						active;
 	public BigDecimal					players;
+
+	public String						clanTag;
+	public String						accountName;
 
 	public ShipBattleInfo()
 	{
@@ -87,6 +91,9 @@ public class ShipBattleInfo implements Comparable<ShipBattleInfo>,Mappable<ShipB
 		tier												= 0;
 		active												= false;
 		players												= BigDecimal.ZERO;
+
+		clanTag												= "";
+		accountName											= "";
 	}
 
 	public int compareTo( ShipBattleInfo perm )
@@ -218,6 +225,42 @@ public class ShipBattleInfo implements Comparable<ShipBattleInfo>,Mappable<ShipB
 			WowsModelBase.appendString( buffer , players					, true );
 			cmds_cnt										= 31;
 			break;
+		case	ST_ADDNOTE	:
+			WowsModelBase.appendString( buffer , key.accountId				, false );
+			WowsModelBase.appendString( buffer , key.shipId					, true );
+			WowsModelBase.appendString( buffer , valueBattles				, true );
+			WowsModelBase.appendString( buffer , valueWins					, true );
+			WowsModelBase.appendString( buffer , valueDraws					, true );
+			WowsModelBase.appendString( buffer , valueLosses				, true );
+			WowsModelBase.appendString( buffer , valueSurvivedBattles		, true );
+			WowsModelBase.appendString( buffer , valueDamageDealt			, true );
+			WowsModelBase.appendString( buffer , valueFrags					, true );
+			WowsModelBase.appendString( buffer , valuePlanesKilled			, true );
+			WowsModelBase.appendString( buffer , valueCapturePoints			, true );
+			WowsModelBase.appendString( buffer , valueDroppedCapturePoints	, true );
+			WowsModelBase.appendString( buffer , valueXp					, true );
+			WowsModelBase.appendString( buffer , valueArtAgro				, true );
+			WowsModelBase.appendString( buffer , valueTorpedoAgro			, true );
+			WowsModelBase.appendString( buffer , valueDamageScouting		, true );
+			WowsModelBase.appendString( buffer , valueShipsSpotted			, true );
+			WowsModelBase.appendString( buffer , valueTeamCapturePoints		, true );
+			WowsModelBase.appendString( buffer , valueTeamDroppedPoints		, true );
+			WowsModelBase.appendString( buffer , valueBattlesSince512		, true );
+			WowsModelBase.appendString( buffer , valueMainShots				, true );
+			WowsModelBase.appendString( buffer , valueMainHits				, true );
+			WowsModelBase.appendString( buffer , valueDistance				, true );
+			WowsModelBase.appendString( buffer , server						, true );
+			WowsModelBase.appendString( buffer , processDate				, true );
+			WowsModelBase.appendString( buffer , shipName					, true );
+			WowsModelBase.appendString( buffer , shipType					, true );
+			WowsModelBase.appendString( buffer , nation						, true );
+			WowsModelBase.appendString( buffer , tier						, true );
+			WowsModelBase.appendString( buffer , active						, true );
+			WowsModelBase.appendString( buffer , players					, true );
+			WowsModelBase.appendString( buffer , clanTag					, true );
+			WowsModelBase.appendString( buffer , accountName				, true );
+			cmds_cnt										= 33;
+			break;
 		}
 		for( int ix = cmds_cnt ; ix < WowsModelBase.CMDS_LEN ; ix++ )
 		{
@@ -339,5 +382,10 @@ public class ShipBattleInfo implements Comparable<ShipBattleInfo>,Mappable<ShipB
 		nation												= info.nation;
 		tier												= info.tier;
 		active												= info.active;
+	}
+	public void setAccountInfo( String p_clanTag , String p_accountName )
+	{
+		clanTag												= p_clanTag;
+		accountName											= p_accountName;
 	}
 }
